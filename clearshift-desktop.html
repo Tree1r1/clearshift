@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Clearshift — wholesale switchable PDLC smart film for Australian trades. Cut to spec, RCM-compliant, dispatched direct to site. Glaziers, tinters, shopfitters, builders.">
   <meta name="keywords" content="smart film Australia, PDLC film trade supply, switchable privacy glass Australia, smart glass wholesale, smart window film Perth, glazier supply Australia">
-  <title>Clearshift — Switchable Smart Film. Trade Supply. Australia.</title>
+  <title>Clearshift — Glass That Switches From Clear to Frosted. Supplied &amp; Installed, Australia.</title>
   <meta property="og:title" content="Clearshift — Switchable Smart Film. Trade Supply. Australia.">
   <meta property="og:description" content="Wholesale PDLC smart film cut to spec, RCM-compliant, dispatched direct to site. Plus: earn $250 for every successful trade referral.">
   <meta property="og:type" content="website">
@@ -121,28 +121,85 @@
     .mob-menu a:hover { color: var(--sand); padding-left: 8px; }
     .mob-foot { margin-top: auto; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
 
-    /* ── HERO BA SLIDER ── */
-    .hero { position: relative; overflow: hidden; height: calc(100vh - 40px); min-height: 560px; max-height: 960px; }
-    @media (max-width: 720px) { .hero { height: 85vw; min-height: 380px; max-height: 640px; } }
-    .ba-hero { position: relative; width: 100%; height: 100%; cursor: col-resize; user-select: none; overflow: hidden; }
-    .ba-before, .ba-after { position: absolute; inset: 0; background-size: cover; background-position: center; }
-    /* After layer clips: inset(0 right 0 0) = show left portion. At 50% shows left half. Drag right → pct grows → right clip shrinks → more of after visible from left. */
-    .ba-after { clip-path: inset(0 50% 0 0); }
-    .ba-line { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,0.9); transform: translateX(-50%); z-index: 10; pointer-events: none; }
-    .ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 52px; height: 52px; background: var(--white); border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 11; pointer-events: none; }
-    .ba-handle svg { width: 20px; height: 20px; color: var(--midnight); }
-    .ba-labels { position: absolute; bottom: 200px; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 28px; z-index: 12; pointer-events: none; }
-    @media (max-width: 720px) { .ba-labels { bottom: 120px; } }
-    .ba-lbl { background: rgba(14,26,42,0.75); backdrop-filter: blur(6px); color: var(--white); padding: 8px 18px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
-    .hero-copy { position: absolute; bottom: 0; left: 0; right: 0; z-index: 20; padding: 80px 48px 48px; background: linear-gradient(to top, rgba(14,26,42,0.88) 0%, rgba(14,26,42,0.5) 55%, transparent 100%); pointer-events: none; }
-    @media (max-width: 720px) { .hero-copy { padding: 48px 20px 32px; } }
+    /* ── HERO — LIVE SWITCH ── */
+    .hero { position: relative; overflow: hidden; height: calc(100vh - 40px); min-height: 660px; max-height: 1020px; background: var(--midnight); }
+    @media (max-width: 720px) { .hero { height: 100svh; min-height: 560px; max-height: none; } }
+    .hero-stage { position: absolute; inset: 0; cursor: pointer; }
+    .hero-img { position: absolute; inset: 0; background-size: cover; background-position: center 38%; transition: opacity 1.05s cubic-bezier(.45, 0, .2, 1); }
+    .hero-img.frost { opacity: 1; }
+    .sw.is-clear .hero-img.frost { opacity: 0; }
+    .frost-flash { position: absolute; inset: 0; background: radial-gradient(ellipse at 55% 35%, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0) 62%); opacity: 0; pointer-events: none; z-index: 3; }
+    .sw.flashing .frost-flash { animation: frostFlash .95s ease; }
+    @keyframes frostFlash { 0% { opacity: 0; } 32% { opacity: .5; } 100% { opacity: 0; } }
+    .hero-copy { position: absolute; bottom: 56px; left: 0; right: 0; z-index: 20; padding: 120px 48px 40px; background: linear-gradient(to top, rgba(14,26,42,0.92) 0%, rgba(14,26,42,0.55) 55%, transparent 100%); pointer-events: none; }
+    @media (max-width: 720px) { .hero-copy { padding: 64px 20px 24px; bottom: 88px; } }
     .hero-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sand); margin-bottom: 14px; }
-    .hero-copy h1 { font-size: clamp(34px, 5.5vw, 76px); font-weight: 200; letter-spacing: -0.03em; line-height: 1.05; color: var(--white); margin-bottom: 18px; max-width: 720px; }
+    .hero-copy h1 { font-size: clamp(36px, 5.6vw, 80px); font-weight: 200; letter-spacing: -0.03em; line-height: 1.05; color: var(--white); margin-bottom: 18px; max-width: 780px; }
     .hero-copy h1 b { font-weight: 700; }
     .hero-copy h1 em { font-style: italic; font-weight: 400; color: var(--sand); }
-    .hero-copy p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 540px; line-height: 1.6; margin-bottom: 30px; }
+    .hero-copy p { font-size: 18px; color: rgba(255,255,255,0.78); max-width: 560px; line-height: 1.6; margin-bottom: 26px; }
     @media (max-width: 720px) { .hero-copy p { display: none; } }
+    .hero-toggle-row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 26px; pointer-events: auto; }
+    .hero-try { font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--sand); }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; pointer-events: auto; }
+    .hero-stats { position: absolute; left: 0; right: 0; bottom: 0; z-index: 25; display: grid; grid-template-columns: repeat(4, 1fr); background: rgba(14,26,42,0.62); backdrop-filter: blur(14px) saturate(140%); border-top: 1px solid rgba(255,255,255,0.14); }
+    .hstat { display: flex; align-items: baseline; gap: 10px; justify-content: center; padding: 16px 10px; border-right: 1px solid rgba(255,255,255,0.08); }
+    .hstat:last-child { border-right: none; }
+    .hstat b { font-size: 20px; font-weight: 800; color: var(--sand); letter-spacing: -0.02em; }
+    .hstat span { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+    @media (max-width: 720px) { .hero-stats { grid-template-columns: 1fr 1fr; } .hstat { padding: 11px 8px; } .hstat:nth-child(2) { border-right: none; } .hstat b { font-size: 16px; } .hstat span { font-size: 9.5px; } }
+
+    /* ── GLASS TOGGLE ── */
+    .glass-toggle { display: inline-flex; align-items: center; gap: 14px; user-select: none; pointer-events: auto; }
+    .gt-state { font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); opacity: 0.4; transition: opacity .3s, color .3s; }
+    .sw:not(.is-clear) .gt-frost, .sw.is-clear .gt-clear { opacity: 1; color: var(--sand); }
+    .gt-pill { position: relative; width: 88px; height: 48px; border-radius: 100px; background: rgba(255,255,255,0.18); border: 1.5px solid rgba(255,255,255,0.4); backdrop-filter: blur(8px); cursor: pointer; padding: 0; transition: background .4s; flex-shrink: 0; }
+    .gt-pill:hover { background: rgba(255,255,255,0.28); }
+    .gt-knob { position: absolute; top: 3.5px; left: 4px; width: 38px; height: 38px; border-radius: 50%; background: var(--sand); box-shadow: 0 2px 14px rgba(0,0,0,0.4); transition: transform .5s cubic-bezier(.34, 1.45, .64, 1), background .4s; }
+    .sw.is-clear .gt-knob { transform: translateX(40px); background: var(--white); }
+    .gt-ring { position: absolute; inset: -8px; border-radius: 100px; border: 2px solid var(--sand); opacity: 0; pointer-events: none; animation: ringPulse 2.4s ease-out 1.4s infinite; }
+    .sw.touched .gt-ring { animation: none; }
+    @keyframes ringPulse { 0% { transform: scale(0.92); opacity: 0; } 25% { opacity: .85; } 100% { transform: scale(1.3); opacity: 0; } }
+    .glass-toggle.dark .gt-state { color: var(--ink-mute); opacity: 0.55; }
+    .sw:not(.is-clear) .glass-toggle.dark .gt-frost, .sw.is-clear .glass-toggle.dark .gt-clear { color: var(--sand-deep); opacity: 1; }
+    .glass-toggle.dark .gt-pill { background: var(--midnight); border-color: var(--midnight); }
+    .glass-toggle.dark .gt-pill:hover { background: var(--mid2); }
+    .sw.is-clear .glass-toggle.dark .gt-knob { background: var(--sand); }
+
+    /* ── MARQUEE ── */
+    .marquee { background: var(--midnight); border-top: 1px solid rgba(212,185,136,0.16); overflow: hidden; padding: 17px 0; }
+    .marquee-track { display: flex; gap: 56px; width: max-content; animation: scrollX 30s linear infinite; }
+    .marquee-track span { font-size: 12.5px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(255,255,255,0.4); font-weight: 700; white-space: nowrap; }
+    .marquee-track b { color: var(--sand); font-weight: 700; }
+    @keyframes scrollX { to { transform: translateX(-50%); } }
+
+    /* ── WHAT WE DO ── */
+    .whatwedo { padding: 110px 0 100px; background: var(--white); }
+    @media (max-width: 720px) { .whatwedo { padding: 72px 0 64px; } }
+    .wwd-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 880px) { .wwd-grid { grid-template-columns: 1fr; } }
+    .wwd-step { position: relative; padding: 36px 32px 38px; background: var(--off); border: 1px solid var(--line); border-radius: 14px; transition: transform .25s, box-shadow .25s, border-color .25s; }
+    .wwd-step:hover { transform: translateY(-5px); box-shadow: 0 18px 48px rgba(14,26,42,0.1); border-color: var(--sand); }
+    .wwd-num { font-size: 12px; font-weight: 800; letter-spacing: 0.22em; color: var(--sand-deep); margin-bottom: 14px; }
+    .wwd-step h3 { font-size: 21px; font-weight: 700; color: var(--midnight); margin-bottom: 10px; letter-spacing: -0.01em; }
+    .wwd-step p { font-size: 14.5px; color: var(--ink-dim); line-height: 1.7; }
+
+    /* ── INTERACTIVE DEMO ── */
+    .demo { padding: 120px 0; background: var(--off); }
+    @media (max-width: 720px) { .demo { padding: 72px 0; } }
+    .demo-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 72px; align-items: center; }
+    @media (max-width: 900px) { .demo-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .demo-stage { position: relative; aspect-ratio: 4 / 3; border-radius: 18px; overflow: hidden; cursor: pointer; box-shadow: 0 30px 80px rgba(14,26,42,0.18); }
+    .demo-img { position: absolute; inset: 0; background-size: cover; background-position: center; transition: opacity 1.05s cubic-bezier(.45, 0, .2, 1); }
+    .demo-img.frost { opacity: 1; }
+    .sw.is-clear .demo-img.frost { opacity: 0; }
+    .demo-hint { position: absolute; bottom: 18px; right: 18px; z-index: 5; background: rgba(14,26,42,0.78); backdrop-filter: blur(6px); color: var(--white); font-size: 10.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 9px 16px; border-radius: 100px; pointer-events: none; }
+    .demo .glass-toggle { margin-top: 30px; }
+    .demo-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 28px; }
+    @media (max-width: 560px) { .demo-cards { grid-template-columns: 1fr; } }
+    .demo-card { background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; display: flex; flex-direction: column; gap: 6px; }
+    .dc-lbl { font-size: 10.5px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-mute); }
+    .dc-val { font-size: 15px; font-weight: 700; color: var(--midnight); }
 
     /* ── BA GALLERY (right below hero) ── */
     .ba-gallery { padding: 80px 0; background: var(--white); }
@@ -152,7 +209,7 @@
     .ba-gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
     @media (max-width: 800px) { .ba-gallery-grid { grid-template-columns: 1fr; } }
     .ba-card-slider { position: relative; width: 100%; aspect-ratio: 4/3; overflow: hidden; cursor: col-resize; user-select: none; border-radius: var(--r); }
-    .ba-card-before, .ba-card-after { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    .ba-card-before, .ba-card-after { position: absolute; inset: 0; background-size: cover; background-position: center; filter: saturate(1.06) contrast(1.04); }
     .ba-card-after { clip-path: inset(0 50% 0 0); }
     .ba-card-line { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,0.9); transform: translateX(-50%); z-index: 10; pointer-events: none; }
     .ba-card-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: var(--white); border-radius: 50%; box-shadow: 0 3px 16px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; z-index: 11; pointer-events: none; }
@@ -431,6 +488,7 @@
       <div class="logo-word">CLEAR<b>SHIFT</b></div>
     </a>
     <ul class="nav-links">
+      <li><a href="#demo">Live Demo</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#applications">Applications</a></li>
       <li><a href="#pricing">Pricing</a></li>
@@ -446,6 +504,7 @@
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu" role="dialog" aria-label="Navigation">
   <button class="mob-close" id="mobClose" aria-label="Close menu">×</button>
+  <a href="#demo" onclick="closeMob()">Live Demo</a>
   <a href="#services" onclick="closeMob()">Services</a>
   <a href="#applications" onclick="closeMob()">Applications</a>
   <a href="#pricing" onclick="closeMob()">Pricing</a>
@@ -456,29 +515,98 @@
   <div class="mob-foot">admin@clearshift.com.au · Trade Sales Only</div>
 </div>
 
-<!-- ═══ HERO BA SLIDER ═══ -->
-<section class="hero" aria-label="Clearshift switchable smart film — before and after demonstration">
-  <div class="ba-hero" id="heroSlider">
-    <!-- FROSTED is the "before" layer — always visible underneath -->
-    <div class="ba-before" style="background-image:url('672e4fb59512eefce9294ed1_SGC_SmartGlass_luxury_office_frosted-p-1080.avif.webp')" role="img" aria-label="Luxury office conference room with smart glass in frosted privacy mode — PDLC film off state"></div>
-    <!-- CLEAR is the "after" layer — clips from RIGHT, revealing clear image on right side -->
-    <div class="ba-after" id="heroAfter" style="background-image:url('672e4fb59e68d29232cb74ce_SGC_SmartGlass_luxury_office_clear-p-1080.avif.webp')" role="img" aria-label="Luxury office conference room with smart glass in crystal clear open mode — PDLC film on state"></div>
-    <div class="ba-line" id="heroLine"></div>
-    <div class="ba-handle" id="heroHandle" aria-hidden="true">
-      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6"/></svg>
-    </div>
-    <div class="ba-labels" aria-hidden="true">
-      <span class="ba-lbl">Frosted — Private</span>
-      <span class="ba-lbl">Clear — Open</span>
-    </div>
+<!-- ═══ HERO — LIVE SWITCH ═══ -->
+<section class="hero sw" id="hero" aria-label="Clearshift switchable smart film — live frosted to clear demonstration">
+  <div class="hero-stage" id="heroStage">
+    <div class="hero-img" style="background-image:url('back-clear.jpg')" role="img" aria-label="Modern Australian home at dusk with smart film windows switched crystal clear — warm interiors visible"></div>
+    <div class="hero-img frost" style="background-image:url('back-frosted.jpg')" role="img" aria-label="The same home with smart film switched to frosted privacy mode — windows opaque white"></div>
+    <div class="frost-flash" aria-hidden="true"></div>
   </div>
   <div class="hero-copy">
-    <div class="hero-tag">Switchable Smart Film · Trade Supply · Australia</div>
-    <h1>Glass that <em>switches.</em><br><b>Margin that stays.</b></h1>
-    <p>Wholesale PDLC smart film delivered direct to your job site. Cut to your spec, RCM-compliant, ready to install. For glaziers, tinters, shopfitters and builders across Australia.</p>
+    <div class="hero-tag">Switchable Smart Film · Supplied &amp; Installed · Australia-Wide</div>
+    <h1>Clear when you want light.<br><b>Frosted when you <em>don't.</em></b></h1>
+    <p>Clearshift turns the glass you already own into switchable smart glass — instant privacy at the flick of a switch. Supplied cut-to-size for trades, or fully installed for homes and businesses.</p>
+    <div class="hero-toggle-row">
+      <div class="glass-toggle">
+        <span class="gt-state gt-frost">Frosted</span>
+        <button class="gt-pill" id="heroPill" aria-pressed="false" aria-label="Switch the glass between frosted and clear"><span class="gt-knob"></span><span class="gt-ring" aria-hidden="true"></span></button>
+        <span class="gt-state gt-clear">Clear</span>
+      </div>
+      <div class="hero-try">Try it — this is a real Clearshift home</div>
+    </div>
     <div class="hero-btns">
-      <a href="#quote" class="btn sand">Open a Trade Account</a>
-      <a href="#applications" class="btn ghost">See Applications</a>
+      <a href="#quote" class="btn sand">Get a same-day quote</a>
+      <a href="#pricing" class="btn ghost">Trade pricing</a>
+    </div>
+  </div>
+  <div class="hero-stats" aria-label="Key facts">
+    <div class="hstat"><b>&lt;1s</b><span>frosted ⇄ clear</span></div>
+    <div class="hstat"><b>5 yr</b><span>film warranty</span></div>
+    <div class="hstat"><b>7–14</b><span>days, nationwide</span></div>
+    <div class="hstat"><b>RCM</b><span>certified controllers</span></div>
+  </div>
+</section>
+
+<!-- ═══ MARQUEE ═══ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Bathrooms <b>·</b> Offices <b>·</b> Shopfronts <b>·</b> Hotels <b>·</b> Clinics <b>·</b> Homes <b>·</b> Boardrooms <b>·</b> Skylights <b>·</b></span>
+    <span>Bathrooms <b>·</b> Offices <b>·</b> Shopfronts <b>·</b> Hotels <b>·</b> Clinics <b>·</b> Homes <b>·</b> Boardrooms <b>·</b> Skylights <b>·</b></span>
+  </div>
+</div>
+
+<!-- ═══ WHAT WE DO ═══ -->
+<section class="whatwedo" id="what">
+  <div class="wrap">
+    <div class="reveal" style="text-align:center;max-width:740px;margin:0 auto 60px">
+      <div class="tag-label" style="justify-content:center">What we do</div>
+      <h2 class="section-title">We make ordinary glass <b>switchable.</b></h2>
+      <p class="section-sub" style="margin:0 auto">Smart film is an ultra-thin PDLC laminate that bonds to the glass you already own. Power on — crystal clear. Power off — instantly frosted. No blinds, no curtains, no replacing the glass.</p>
+    </div>
+    <div class="wwd-grid">
+      <div class="wwd-step reveal">
+        <div class="wwd-num">01 — Supply</div>
+        <h3>Cut to your exact sizes</h3>
+        <p>PDLC smart film cut to spec with bus bars pre-attached, packed with an RCM-compliant controller and install manual, dispatched anywhere in Australia in 7–14 days.</p>
+      </div>
+      <div class="wwd-step reveal d1">
+        <div class="wwd-num">02 — Install</div>
+        <h3>Our installers, or yours</h3>
+        <p>Full-service installation by certified technicians with a licensed electrician — or supply-only for glaziers, tinters, shopfitters and builders who install themselves.</p>
+      </div>
+      <div class="wwd-step reveal d2">
+        <div class="wwd-num">03 — Switch</div>
+        <h3>Control it any way you like</h3>
+        <p>Wall switch, RF remote, smartphone app — or just ask Alexa, Google Home or Siri. Frost the bathroom at night, clear the boardroom after the meeting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INTERACTIVE DEMO ═══ -->
+<section class="demo sw" id="demo">
+  <div class="wrap demo-grid">
+    <div class="reveal">
+      <div class="demo-stage" id="demoStage">
+        <div class="demo-img" style="background-image:url('672e4fb59e68d29232cb74ce_SGC_SmartGlass_luxury_office_clear-p-1080.avif.webp')" role="img" aria-label="Luxury office boardroom with smart glass switched crystal clear"></div>
+        <div class="demo-img frost" style="background-image:url('672e4fb59512eefce9294ed1_SGC_SmartGlass_luxury_office_frosted-p-1080.avif.webp')" role="img" aria-label="The same boardroom with smart glass switched to frosted privacy mode"></div>
+        <div class="frost-flash" aria-hidden="true"></div>
+        <div class="demo-hint">Click the glass</div>
+      </div>
+    </div>
+    <div class="reveal d1">
+      <div class="tag-label">Interactive product demo</div>
+      <h2 class="section-title">Click once.<br>The room <em>changes.</em></h2>
+      <p class="section-sub">Use the switch to see how smart film moves from clear glass to private frosted glass in under a second. This is the selling moment for bathrooms, offices, medical rooms, hotels and shopfronts.</p>
+      <div class="glass-toggle dark">
+        <span class="gt-state gt-frost">Frosted</span>
+        <button class="gt-pill" id="demoPill" aria-pressed="false" aria-label="Switch the demo glass between frosted and clear"><span class="gt-knob"></span><span class="gt-ring" aria-hidden="true"></span></button>
+        <span class="gt-state gt-clear">Clear</span>
+      </div>
+      <div class="demo-cards">
+        <div class="demo-card"><span class="dc-lbl">Current mode</span><span class="dc-val" id="demoMode">Frosted — Private</span></div>
+        <div class="demo-card"><span class="dc-lbl">Control options</span><span class="dc-val">Switch · Remote · App · Voice</span></div>
+      </div>
     </div>
   </div>
 </section>
@@ -488,8 +616,8 @@
   <div class="wrap">
     <div class="ba-gallery-header reveal">
       <div class="tag-label" style="justify-content:center">See the Difference</div>
-      <h2 class="section-title" style="text-align:center">Drag to reveal the transformation.</h2>
-      <p class="section-sub" style="margin:10px auto 0;text-align:center">Every panel switches from frosted privacy to crystal clear in under a second — silently, on demand, indefinitely.</p>
+      <h2 class="section-title" style="text-align:center">Still don't believe it? <b>Drag it yourself.</b></h2>
+      <p class="section-sub" style="margin:10px auto 0;text-align:center">Real installs, real glass. Every panel switches from frosted privacy to crystal clear in under a second — silently, on demand, indefinitely.</p>
     </div>
     <div class="ba-gallery-grid">
 
@@ -524,8 +652,8 @@
           </div>
         </div>
         <div class="ba-card-info">
-          <h3>Residential — Smart Film on Existing Windows</h3>
-          <p>Film applied directly to existing glass. No replacement, no builder. Full privacy when powered off, bright and open when on — your client controls it.</p>
+          <h3>Residential — Real Clearshift Install, Perth WA</h3>
+          <p>Film applied directly to this home's existing glass. No replacement, no builder. Full privacy when powered off, bright and open when on — the owner controls it.</p>
         </div>
       </div>
 
@@ -759,7 +887,7 @@
 
 <!-- ═══ REFERRAL PROGRAM ═══ -->
 <section class="referral" id="referral">
-  <div class="referral-bg" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2000&q=80')" role="img" aria-label="Luxury Australian home at dusk with large glass windows"></div>
+  <div class="referral-bg" style="background-image:url('home-dusk.jpg');background-position:center 30%" role="img" aria-label="Luxury Australian home at dusk with pool and large glass windows — Clearshift project"></div>
   <div class="wrap referral-inner">
     <div class="referral-grid">
       <div class="reveal">
@@ -1112,9 +1240,52 @@ function initBA(sliderId, afterId, lineId, handleId) {
   document.addEventListener('touchmove',function(e) { if (drag) update(e.touches[0].clientX); }, { passive: true });
 }
 
-initBA('heroSlider', 'heroAfter', 'heroLine', 'heroHandle');
 initBA('card1',      'c1after',   'c1line',   'c1handle');
 initBA('card2',      'c2after',   'c2line',   'c2handle');
+
+// ── FROST SWITCH ENGINE ──
+// .is-clear on the section fades the frosted layer out; .flashing replays the frost-flash bloom.
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function makeSwitch(section, pill, modeEl) {
+  if (!section || !pill) return null;
+  let touched = false;
+  function set(clear) {
+    section.classList.toggle('is-clear', clear);
+    section.classList.remove('flashing'); void section.offsetWidth; section.classList.add('flashing');
+    pill.setAttribute('aria-pressed', String(clear));
+    if (modeEl) modeEl.textContent = clear ? 'Clear — Open' : 'Frosted — Private';
+  }
+  function manual() { touched = true; section.classList.add('touched'); set(!section.classList.contains('is-clear')); }
+  pill.addEventListener('click', function(e) { e.stopPropagation(); manual(); });
+  return { set: set, manual: manual, isTouched: function() { return touched; } };
+}
+
+const heroSec = document.getElementById('hero');
+const heroSwitch = makeSwitch(heroSec, document.getElementById('heroPill'));
+if (heroSwitch) {
+  document.getElementById('heroStage').addEventListener('click', heroSwitch.manual);
+  if (!reduceMotion) {
+    setTimeout(function() { if (!heroSwitch.isTouched()) heroSwitch.set(true); }, 1600);
+  }
+}
+
+const demoSec = document.getElementById('demo');
+const demoSwitch = makeSwitch(demoSec, document.getElementById('demoPill'), document.getElementById('demoMode'));
+if (demoSwitch) {
+  document.getElementById('demoStage').addEventListener('click', demoSwitch.manual);
+  if (!reduceMotion) {
+    const demoIO = new IntersectionObserver(function(entries) {
+      entries.forEach(function(en) {
+        if (en.isIntersecting) {
+          demoIO.disconnect();
+          setTimeout(function() { if (!demoSwitch.isTouched()) demoSwitch.set(true); }, 900);
+          setTimeout(function() { if (!demoSwitch.isTouched()) demoSwitch.set(false); }, 3400);
+        }
+      });
+    }, { threshold: 0.5 });
+    demoIO.observe(demoSec);
+  }
+}
 
 // ── FAQ ──
 function toggleFaq(btn) {

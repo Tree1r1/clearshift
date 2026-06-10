@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wholesale smart film for Australian trades. Switchable PDLC film delivered direct. Glaziers, tinters, shopfitters and builders — trade pricing on request.">
+  <title>Clearshift — Smart Film, Trade Supply. Australia.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Cream & Espresso palette */
+      --cream:        #F4EDE0;
+      --cream-dark:   #EBE3D2;
+      --cream-deeper: #E0D5BF;
+      --espresso:     #2D2A26;
+      --espresso-soft:#3A3631;
+      --taupe:        #8A7D6B;
+      --taupe-light:  #B8AC97;
+      --accent:       #6B4F2C;    /* burnt caramel — used sparingly */
+      --line:         #D9CFB8;
+      --line-soft:    #E8DFC9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--cream);
+      color: var(--espresso);
+      font-family: 'Manrope', -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      letter-spacing: -0.005em;
+    }
+
+    .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0; }
+
+    .wrap { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+    @media (max-width: 720px) { .wrap { padding: 0 20px; } }
+
+    section { padding: 96px 0; }
+    @media (max-width: 720px) { section { padding: 64px 0; } }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--taupe);
+    }
+
+    /* ============= LOGO ============= */
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .logo-tile {
+      width: 38px; height: 38px;
+      background: var(--espresso);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-tile svg { width: 22px; height: 22px; }
+    .logo-text {
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.08em;
+    }
+    .logo-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: 0.18em;
+      color: var(--taupe);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    /* ============= NAV ============= */
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(244, 237, 224, 0.92);
+      backdrop-filter: saturate(160%) blur(12px);
+      -webkit-backdrop-filter: saturate(160%) blur(12px);
+      border-bottom: 1px solid var(--line-soft);
+    }
+    nav.top .row {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 72px;
+    }
+    nav.top .links { display: flex; gap: 32px; align-items: center; }
+    nav.top a:not(.btn) {
+      color: var(--espresso);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color .2s ease;
+    }
+    nav.top a:hover { color: var(--accent); }
+    @media (max-width: 880px) {
+      nav.top .links a:not(.btn) { display: none; }
+    }
+
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px;
+      background: var(--espresso);
+      color: var(--cream);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none; cursor: pointer;
+      border-radius: 4px;
+      transition: all .2s ease;
+    }
+    .btn:hover { background: var(--accent); transform: translateY(-1px); }
+    .btn.ghost {
+      background: transparent;
+      color: var(--espresso);
+      border: 1px solid var(--espresso);
+    }
+    .btn.ghost:hover { background: var(--espresso); color: var(--cream); }
+    .btn.lg { padding: 16px 28px; font-size: 12px; }
+
+    /* ============= HERO ============= */
+    .hero { padding: 56px 0 80px; position: relative; }
+    .hero .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    @media (max-width: 980px) {
+      .hero .grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .hero h1 {
+      font-size: clamp(44px, 6.8vw, 92px);
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .hero h1 .accent { color: var(--accent); font-weight: 500; }
+    .hero h1 .light { font-weight: 300; color: var(--taupe); }
+    .hero p.lead {
+      font-size: 18px;
+      color: var(--espresso-soft);
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-meta {
+      display: flex; gap: 40px; margin-top: 48px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line);
+      max-width: 540px;
+      flex-wrap: wrap;
+    }
+    .hero-meta div .lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--taupe);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .hero-meta div .val {
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    /* ============= INTERACTIVE WINDOW DEMO ============= */
+    .demo-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1.05;
+      background: var(--cream-dark);
+      border-radius: 8px;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+    }
+    .demo-wrap canvas {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      cursor: pointer;
+    }
+    .demo-overlay {
+      position: absolute; inset: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .demo-tag {
+      align-self: flex-start;
+      background: rgba(45, 42, 38, 0.85);
+      color: var(--cream);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 7px 11px;
+      border-radius: 3px;
+      backdrop-filter: blur(6px);
+    }
+    .demo-controls {
+      align-self: center;
+      pointer-events: auto;
+    }
+    .demo-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--espresso);
+      color: var(--cream);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 13px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .demo-toggle:hover { background: var(--accent); }
+    .demo-toggle svg { width: 14px; height: 14px; }
+    .demo-status {
+      align-self: flex-end;
+      background: rgba(45, 42, 38, 0.85);
+      color: var(--cream);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 7px 11px;
+      border-radius: 3px;
+      backdrop-filter: blur(6px);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .demo-status .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--taupe-light);
+      transition: all .3s ease;
+    }
+    .demo-wrap.is-on .demo-status .dot {
+      background: #B8E07A;
+      box-shadow: 0 0 12px rgba(184, 224, 122, 0.6);
+    }
+
+    /* ============= STAT STRIP ============= */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: var(--espresso);
+      color: var(--cream);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    @media (max-width: 780px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+    .stat {
+      padding: 36px 28px;
+      border-right: 1px solid rgba(244, 237, 224, 0.08);
+    }
+    .stat:last-child { border-right: none; }
+    @media (max-width: 780px) {
+      .stat:nth-child(2) { border-right: none; }
+      .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid rgba(244, 237, 224, 0.08); }
+    }
+    .stat .num {
+      font-size: 44px;
+      line-height: 1;
+      letter-spacing: -0.025em;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    .stat .num small {
+      font-size: 16px;
+      color: var(--taupe-light);
+      font-weight: 400;
+      margin-left: 2px;
+    }
+    .stat .lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--taupe-light);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    /* ============= SECTION HEAD ============= */
+    .sec-head {
+      max-width: 720px;
+      margin-bottom: 64px;
+    }
+    .sec-head .eyebrow { margin-bottom: 16px; display: block; }
+    .sec-head h2 {
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .sec-head p {
+      color: var(--espresso-soft);
+      font-size: 16px;
+      max-width: 580px;
+    }
+
+    /* ============= APPLICATIONS ============= */
+    .apps-section { background: var(--cream-dark); }
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 920px) { .apps-grid { grid-template-columns: 1fr; } }
+    .app-card {
+      background: var(--cream);
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--line-soft);
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .app-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(45, 42, 38, 0.08);
+    }
+    .app-illustration {
+      width: 100%;
+      aspect-ratio: 16 / 11;
+      background: var(--cream-deeper);
+      overflow: hidden;
+      position: relative;
+    }
+    .app-illustration svg { width: 100%; height: 100%; display: block; }
+    .app-card .body { padding: 24px 26px 28px; }
+    .app-card .tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .app-card h3 {
+      font-size: 22px;
+      letter-spacing: -0.015em;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .app-card p { color: var(--espresso-soft); font-size: 14.5px; }
+
+    /* ============= PROCESS ============= */
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    @media (max-width: 860px) { .process-grid { grid-template-columns: 1fr; } }
+    .step {
+      padding: 48px 32px;
+      border-right: 1px solid var(--line);
+    }
+    .step:last-child { border-right: none; }
+    @media (max-width: 860px) {
+      .step { border-right: none; border-bottom: 1px solid var(--line); }
+      .step:last-child { border-bottom: none; }
+    }
+    .step .num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+      letter-spacing: 0.12em;
+      margin-bottom: 24px;
+    }
+    .step h4 {
+      font-size: 26px;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .step p {
+      color: var(--espresso-soft);
+      font-size: 15px;
+    }
+
+    /* ============= PRODUCTS ============= */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 980px) { .products-grid { grid-template-columns: 1fr; } }
+    .product {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 32px 30px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .product .badge {
+      position: absolute; top: 20px; right: 20px;
+      background: var(--espresso);
+      color: var(--cream);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      letter-spacing: 0.14em;
+      padding: 5px 9px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+    .product .sku {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.16em;
+      color: var(--taupe);
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    .product h3 {
+      font-size: 26px;
+      letter-spacing: -0.02em;
+      font-weight: 600;
+      margin-bottom: 14px;
+      line-height: 1.1;
+    }
+    .product p {
+      color: var(--espresso-soft);
+      font-size: 14.5px;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+    .product .specs {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      border-top: 1px solid var(--line-soft);
+      padding-top: 18px;
+      line-height: 2;
+      color: var(--taupe);
+    }
+    .product .specs span { color: var(--espresso); }
+    .product .specs .lbl { display: inline-block; width: 100px; }
+
+    /* ============= TRADE PRICING ============= */
+    .pricing-section { background: var(--cream-dark); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 980px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .tier {
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 36px 30px;
+    }
+    .tier.feat {
+      background: var(--espresso);
+      color: var(--cream);
+      border-color: var(--espresso);
+      transform: scale(1.02);
+    }
+    @media (max-width: 980px) { .tier.feat { transform: none; } }
+    .tier .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin-bottom: 12px;
+    }
+    .tier.feat .name { color: var(--taupe-light); }
+    .tier h4 {
+      font-size: 30px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .tier .qualif {
+      font-size: 13px;
+      color: var(--taupe);
+      margin-bottom: 28px;
+    }
+    .tier.feat .qualif { color: var(--taupe-light); }
+    .tier ul { list-style: none; }
+    .tier li {
+      display: flex; justify-content: space-between;
+      padding: 14px 0;
+      border-top: 1px solid var(--line-soft);
+      font-size: 14px;
+    }
+    .tier.feat li { border-color: rgba(244, 237, 224, 0.1); }
+    .tier li:last-child { border-bottom: 1px solid var(--line-soft); }
+    .tier.feat li:last-child { border-bottom-color: rgba(244, 237, 224, 0.1); }
+    .tier li span:last-child {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .tier li span:first-child { color: var(--taupe); }
+    .tier.feat li span:first-child { color: var(--taupe-light); }
+    .tier .terms {
+      margin-top: 22px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--taupe);
+    }
+    .tier.feat .terms { color: var(--taupe-light); }
+
+    /* ============= FAQ ============= */
+    .faq { max-width: 880px; }
+    .faq details {
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+    }
+    .faq details:last-of-type { border-bottom: 1px solid var(--line); }
+    .faq summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-size: 20px;
+      letter-spacing: -0.015em;
+      font-weight: 500;
+      line-height: 1.3;
+      gap: 24px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: '+';
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px;
+      color: var(--accent);
+      flex-shrink: 0;
+      transition: transform .25s ease;
+    }
+    .faq details[open] summary::after { content: '−'; }
+    .faq details p {
+      margin-top: 16px;
+      color: var(--espresso-soft);
+      font-size: 15px;
+      max-width: 720px;
+      line-height: 1.65;
+    }
+
+    /* ============= CONTACT ============= */
+    .contact-section {
+      background: var(--espresso);
+      color: var(--cream);
+    }
+    .contact-section .sec-head h2,
+    .contact-section .sec-head .eyebrow { color: var(--cream); }
+    .contact-section .sec-head .eyebrow { color: var(--taupe-light); }
+    .contact-section .sec-head p { color: var(--taupe-light); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 64px;
+      align-items: start;
+    }
+    @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .contact-info {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 2.2;
+      color: var(--cream);
+    }
+    .contact-info strong {
+      color: var(--taupe-light);
+      font-weight: 400;
+      display: inline-block;
+      width: 90px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 10.5px;
+    }
+
+    form .field { margin-bottom: 18px; }
+    form label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--taupe-light);
+      margin-bottom: 8px;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      background: var(--espresso-soft);
+      border: 1px solid rgba(244, 237, 224, 0.15);
+      color: var(--cream);
+      padding: 14px 16px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      border-radius: 4px;
+      transition: border-color .2s ease;
+    }
+    form input:focus, form select:focus, form textarea:focus {
+      outline: none; border-color: var(--cream);
+    }
+    form textarea { resize: vertical; min-height: 110px; }
+    form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 540px) { form .row { grid-template-columns: 1fr; } }
+    form .btn-submit {
+      background: var(--cream);
+      color: var(--espresso);
+      width: 100%;
+      justify-content: center;
+      padding: 16px;
+      margin-top: 8px;
+    }
+    form .btn-submit:hover { background: white; }
+    form .legal {
+      margin-top: 14px;
+      font-size: 11.5px;
+      color: var(--taupe-light);
+      line-height: 1.6;
+    }
+    .form-success {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 16px;
+      background: rgba(184, 224, 122, 0.12);
+      border: 1px solid rgba(184, 224, 122, 0.4);
+      color: #B8E07A;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      border-radius: 4px;
+    }
+
+    /* ============= FOOTER ============= */
+    footer {
+      background: var(--espresso);
+      color: var(--taupe-light);
+      padding: 36px 0;
+      border-top: 1px solid rgba(244, 237, 224, 0.08);
+    }
+    footer .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    footer .legal {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--taupe);
+      letter-spacing: 0.06em;
+      line-height: 1.8;
+      max-width: 720px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(244, 237, 224, 0.06);
+    }
+
+    /* ============= PULL QUOTE ============= */
+    .pull-quote {
+      text-align: center;
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 80px 0;
+    }
+    .pull-quote p {
+      font-size: clamp(26px, 3.4vw, 38px);
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      font-weight: 400;
+      color: var(--espresso);
+    }
+    .pull-quote p .accent { color: var(--accent); font-style: italic; font-weight: 500; }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="top">
+    <div class="wrap row">
+      <a href="#" class="logo">
+        <div class="logo-tile">
+          <!-- Diagonal-split window icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="navHatch" patternUnits="userSpaceOnUse" width="2.2" height="2.2" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="2.2" stroke="#F4EDE0" stroke-width="0.55"/>
+              </pattern>
+              <clipPath id="navClip">
+                <polygon points="3,3 21,3 3,21"/>
+              </clipPath>
+            </defs>
+            <rect x="3" y="3" width="18" height="18" stroke="#F4EDE0" stroke-width="1.3" fill="none"/>
+            <rect x="3" y="3" width="18" height="18" fill="url(#navHatch)" clip-path="url(#navClip)"/>
+            <line x1="21" y1="3" x2="3" y2="21" stroke="#F4EDE0" stroke-width="1.3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="logo-text">CLEARSHIFT</div>
+          <div class="logo-tag">Smart Film Co. · AU</div>
+        </div>
+      </a>
+      <div class="links">
+        <a href="#applications">Applications</a>
+        <a href="#how">How It Works</a>
+        <a href="#products">Products</a>
+        <a href="#pricing">Trade Pricing</a>
+        <a href="#contact" class="btn">Request Trade Access</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <span class="eyebrow" style="display:block; margin-bottom:24px;">◇ &nbsp; Wholesale Smart Film &nbsp;·&nbsp; For The Trades &nbsp;·&nbsp; Australia</span>
+          <h1>
+            Glass that <span class="accent">switches.</span><br>
+            <span class="light">Margin that</span><br>
+            stays with you.
+          </h1>
+          <p class="lead">
+            Switchable PDLC film delivered direct to your job site or workshop. Glaziers, tinters, shopfitters and builders — you install, your client flicks the switch, you keep the margin.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn lg">Request Trade Pricing →</a>
+            <a href="#applications" class="btn ghost lg">See Applications</a>
+          </div>
+          <div class="hero-meta">
+            <div>
+              <div class="lbl">Lead Time</div>
+              <div class="val">7–14 days</div>
+            </div>
+            <div>
+              <div class="lbl">Min. Order</div>
+              <div class="val">1 m²</div>
+            </div>
+            <div>
+              <div class="lbl">Coverage</div>
+              <div class="val">Australia-wide</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive demo -->
+        <div class="demo-wrap" id="demo">
+          <canvas id="canvas3d"></canvas>
+          <div class="demo-overlay">
+            <div class="demo-tag">Demo · Tap the glass</div>
+            <div class="demo-controls">
+              <button class="demo-toggle" id="toggleBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M12 3v9M6 7a8 8 0 1 0 12 0" stroke-linecap="round"/>
+                </svg>
+                <span id="toggleTxt">Tap to Activate</span>
+              </button>
+            </div>
+            <div class="demo-status" style="align-self:flex-end;">
+              <span class="dot"></span>
+              <span id="statusTxt">60V AC · OFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ STATS ============ -->
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat">
+        <div class="num">7–14<small>days</small></div>
+        <div class="lbl">Door to door</div>
+      </div>
+      <div class="stat">
+        <div class="num">~50<small>%</small></div>
+        <div class="lbl">Trade margin</div>
+      </div>
+      <div class="stat">
+        <div class="num">88<small>%</small></div>
+        <div class="lbl">Light when clear</div>
+      </div>
+      <div class="stat">
+        <div class="num">5<small>yr</small></div>
+        <div class="lbl">Film warranty</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ APPLICATIONS ============ -->
+  <section id="applications" class="apps-section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">[ 01 ] Where it goes</span>
+        <h2>Every job your client wants to look impressive in.</h2>
+        <p>Switchable film retrofits to existing glass. Powered on, it's crystal clear. Powered off, it's frosted privacy. No moving parts. No blinds to clean.</p>
+      </div>
+
+      <div class="apps-grid">
+
+        <!-- ============= APP 1: BATHROOM ============= -->
+        <div class="app-card">
+          <div class="app-illustration">
+            <svg viewBox="0 0 400 275" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <!-- background wall -->
+              <rect x="0" y="0" width="400" height="275" fill="#E0D5BF"/>
+              <!-- tile grid wall -->
+              <g opacity="0.5">
+                <line x1="0" y1="60" x2="400" y2="60" stroke="#C5B89E" stroke-width="0.8"/>
+                <line x1="0" y1="120" x2="400" y2="120" stroke="#C5B89E" stroke-width="0.8"/>
+                <line x1="0" y1="180" x2="400" y2="180" stroke="#C5B89E" stroke-width="0.8"/>
+                <line x1="100" y1="0" x2="100" y2="275" stroke="#C5B89E" stroke-width="0.8"/>
+                <line x1="200" y1="0" x2="200" y2="275" stroke="#C5B89E" stroke-width="0.8"/>
+                <line x1="300" y1="0" x2="300" y2="275" stroke="#C5B89E" stroke-width="0.8"/>
+              </g>
+              <!-- floor -->
+              <rect x="0" y="230" width="400" height="45" fill="#C5B89E"/>
+              <!-- shower glass panel (the smart film) -->
+              <g>
+                <!-- frame -->
+                <rect x="60" y="50" width="180" height="190" fill="none" stroke="#3A3631" stroke-width="3" rx="2"/>
+                <!-- glass: frosted appearance -->
+                <defs>
+                  <pattern id="bathHatch" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="3" stroke="#FFFFFF" stroke-width="0.9" opacity="0.65"/>
+                  </pattern>
+                </defs>
+                <rect x="63" y="53" width="174" height="184" fill="#F4EDE0" opacity="0.45"/>
+                <rect x="63" y="53" width="174" height="184" fill="url(#bathHatch)"/>
+                <!-- silhouette of person inside (very abstract, just shapes — frosted privacy effect) -->
+                <g opacity="0.18">
+                  <circle cx="150" cy="100" r="14" fill="#3A3631"/>
+                  <rect x="135" y="115" width="30" height="55" rx="8" fill="#3A3631"/>
+                  <rect x="138" y="170" width="9" height="50" fill="#3A3631"/>
+                  <rect x="153" y="170" width="9" height="50" fill="#3A3631"/>
+                </g>
+              </g>
+              <!-- showerhead -->
+              <g>
+                <rect x="290" y="60" width="4" height="40" fill="#3A3631"/>
+                <circle cx="292" cy="60" r="8" fill="#3A3631"/>
+                <!-- water drops -->
+                <line x1="288" y1="68" x2="285" y2="100" stroke="#8A7D6B" stroke-width="0.8" opacity="0.6"/>
+                <line x1="292" y1="68" x2="291" y2="105" stroke="#8A7D6B" stroke-width="0.8" opacity="0.6"/>
+                <line x1="296" y1="68" x2="298" y2="100" stroke="#8A7D6B" stroke-width="0.8" opacity="0.6"/>
+              </g>
+              <!-- small switch on wall -->
+              <g>
+                <rect x="335" y="135" width="20" height="30" rx="2" fill="#F4EDE0" stroke="#3A3631" stroke-width="1.2"/>
+                <rect x="342" y="142" width="6" height="10" fill="#6B4F2C"/>
+              </g>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="tag">Residential · High demand</div>
+            <h3>Bathrooms &amp; ensuites</h3>
+            <p>The hero application. Clear for natural light, frosted on demand. Replaces blinds, frosted vinyl, and obscure glass — and your client will never stop talking about it.</p>
+          </div>
+        </div>
+
+        <!-- ============= APP 2: OFFICE ============= -->
+        <div class="app-card">
+          <div class="app-illustration">
+            <svg viewBox="0 0 400 275" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <!-- back wall -->
+              <rect x="0" y="0" width="400" height="230" fill="#EBE3D2"/>
+              <!-- floor -->
+              <rect x="0" y="230" width="400" height="45" fill="#3A3631"/>
+              <!-- partition wall (smart film glass) -->
+              <g>
+                <!-- frame -->
+                <rect x="40" y="40" width="320" height="190" fill="none" stroke="#2D2A26" stroke-width="3"/>
+                <!-- vertical mullions -->
+                <line x1="146" y1="40" x2="146" y2="230" stroke="#2D2A26" stroke-width="2.5"/>
+                <line x1="254" y1="40" x2="254" y2="230" stroke="#2D2A26" stroke-width="2.5"/>
+                <!-- LEFT panel: CLEAR (powered on) — you can see meeting room -->
+                <rect x="43" y="43" width="100" height="184" fill="#F4EDE0" opacity="0.35"/>
+                <!-- meeting room contents visible through clear panel -->
+                <g opacity="0.55">
+                  <!-- table -->
+                  <rect x="60" y="155" width="65" height="6" fill="#6B4F2C"/>
+                  <!-- chair backs -->
+                  <rect x="65" y="145" width="12" height="12" fill="#3A3631"/>
+                  <rect x="83" y="145" width="12" height="12" fill="#3A3631"/>
+                  <rect x="101" y="145" width="12" height="12" fill="#3A3631"/>
+                  <!-- person silhouette -->
+                  <circle cx="115" cy="110" r="7" fill="#3A3631"/>
+                  <rect x="108" y="118" width="14" height="28" fill="#3A3631"/>
+                  <!-- pendant light -->
+                  <line x1="90" y1="43" x2="90" y2="80" stroke="#3A3631" stroke-width="0.8"/>
+                  <circle cx="90" cy="84" r="5" fill="#D4B988"/>
+                </g>
+                <!-- MIDDLE panel: FROSTED -->
+                <defs>
+                  <pattern id="officeHatch" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="3" stroke="#FFFFFF" stroke-width="1" opacity="0.7"/>
+                  </pattern>
+                </defs>
+                <rect x="149" y="43" width="102" height="184" fill="#F4EDE0" opacity="0.55"/>
+                <rect x="149" y="43" width="102" height="184" fill="url(#officeHatch)"/>
+                <!-- RIGHT panel: CLEAR -->
+                <rect x="257" y="43" width="100" height="184" fill="#F4EDE0" opacity="0.35"/>
+                <g opacity="0.5">
+                  <!-- desk -->
+                  <rect x="275" y="160" width="70" height="6" fill="#6B4F2C"/>
+                  <rect x="278" y="166" width="3" height="40" fill="#3A3631"/>
+                  <rect x="339" y="166" width="3" height="40" fill="#3A3631"/>
+                  <!-- monitor -->
+                  <rect x="295" y="135" width="30" height="22" fill="#2D2A26"/>
+                  <rect x="307" y="157" width="6" height="3" fill="#2D2A26"/>
+                  <!-- plant -->
+                  <rect x="270" y="150" width="10" height="14" fill="#3A3631"/>
+                  <path d="M 275 150 Q 270 135, 268 145 M 275 150 Q 280 135, 283 145" stroke="#3A3631" stroke-width="1.5" fill="none"/>
+                </g>
+              </g>
+              <!-- floor reflection lines -->
+              <line x1="40" y1="230" x2="360" y2="230" stroke="#1A1814" stroke-width="0.8" opacity="0.5"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="tag">Commercial · High value</div>
+            <h3>Office partitions</h3>
+            <p>Clear when collaborating, frosted on call. Conference rooms, executive offices, medical clinics. Higher ticket per job, and your fitout client will spec it on every project after the first.</p>
+          </div>
+        </div>
+
+        <!-- ============= APP 3: RETAIL ============= -->
+        <div class="app-card">
+          <div class="app-illustration">
+            <svg viewBox="0 0 400 275" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+              <!-- street/sky background -->
+              <rect x="0" y="0" width="400" height="200" fill="#D4C7AD"/>
+              <!-- street -->
+              <rect x="0" y="200" width="400" height="75" fill="#3A3631"/>
+              <!-- shopfront with smart film -->
+              <g>
+                <!-- header / signage area -->
+                <rect x="20" y="20" width="360" height="40" fill="#2D2A26"/>
+                <text x="200" y="45" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" letter-spacing="3" fill="#F4EDE0">CLOSED</text>
+                <!-- glass shopfront -->
+                <rect x="20" y="60" width="360" height="160" fill="none" stroke="#2D2A26" stroke-width="3"/>
+                <!-- door split -->
+                <line x1="200" y1="60" x2="200" y2="220" stroke="#2D2A26" stroke-width="2.5"/>
+                <!-- LEFT: frosted (closed for the night, privacy mode) -->
+                <defs>
+                  <pattern id="retailHatch" patternUnits="userSpaceOnUse" width="3.5" height="3.5" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="3.5" stroke="#FFFFFF" stroke-width="1" opacity="0.75"/>
+                  </pattern>
+                </defs>
+                <rect x="23" y="63" width="174" height="154" fill="#F4EDE0" opacity="0.55"/>
+                <rect x="23" y="63" width="174" height="154" fill="url(#retailHatch)"/>
+                <!-- RIGHT: frosted too -->
+                <rect x="203" y="63" width="174" height="154" fill="#F4EDE0" opacity="0.55"/>
+                <rect x="203" y="63" width="174" height="154" fill="url(#retailHatch)"/>
+                <!-- mullions/dividers across both -->
+                <line x1="20" y1="140" x2="380" y2="140" stroke="#2D2A26" stroke-width="2"/>
+              </g>
+              <!-- streetlamp -->
+              <g>
+                <rect x="358" y="155" width="2" height="100" fill="#2D2A26"/>
+                <rect x="354" y="150" width="10" height="8" fill="#2D2A26"/>
+                <circle cx="359" cy="154" r="14" fill="#D4B988" opacity="0.35"/>
+              </g>
+              <!-- small switch indicator (panel) -->
+              <g>
+                <circle cx="380" cy="248" r="4" fill="#B8E07A"/>
+              </g>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="tag">Retail · Hospitality</div>
+            <h3>Shopfronts &amp; hospitality</h3>
+            <p>Clear by day to draw the eye, frosted at close for security and signage. Boutiques, salons, restaurants, private dining. Talk to your shopfit clients about it before they finish their next project.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PULL QUOTE ============ -->
+  <div class="wrap">
+    <div class="pull-quote">
+      <p>Your client doesn't need to know where the film comes from.<br>They need it to <span class="accent">work</span>, and look like magic when it does.</p>
+    </div>
+  </div>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">[ 02 ] How it works</span>
+        <h2>Order, dispatch, install. That's it.</h2>
+        <p>No stock holding on your side. No factory minimums. We carry the supply chain so you carry the job.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="step">
+          <div class="num">STEP 01</div>
+          <h4>You quote, you order.</h4>
+          <p>Send us the dimensions and quantity. We come back same day with trade price, lead time and freight cost. Pay by card, transfer or PayID.</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 02</div>
+          <h4>We dispatch direct.</h4>
+          <p>Film ships from our supply partner straight to your job site or workshop. Tracking sent on the spot. Customs and GST handled.</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 03</div>
+          <h4>You install &amp; bill.</h4>
+          <p>Your installer fits the film. Your sparky wires the 60V transformer (RCM-marked). You bill your client at your retail rate. Margin stays with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products" style="background: var(--cream-dark);">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">[ 03 ] What we ship</span>
+        <h2>Three SKUs. No bullshit catalogue.</h2>
+        <p>The workhorse film, the controller that drives it, and the kit that connects everything. Order each separately or as a package.</p>
+      </div>
+
+      <div class="products-grid">
+
+        <div class="product">
+          <div class="badge">Workhorse</div>
+          <div class="sku">SKU · CS-PDLC-W12</div>
+          <h3>Standard White<br>PDLC Film</h3>
+          <p>Self-adhesive switchable film. Clear when powered (~88% LT), frosted when not. The product you'll sell 80% of the time.</p>
+          <div class="specs">
+            <div><span class="lbl">Width</span><span>1200 mm</span></div>
+            <div><span class="lbl">Roll</span><span>30 m × 1.2 m</span></div>
+            <div><span class="lbl">Light</span><span>88% clear</span></div>
+            <div><span class="lbl">Haze</span><span>&lt; 5% clear</span></div>
+            <div><span class="lbl">Drive</span><span>48–65 V AC</span></div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="sku">SKU · CS-CTL-60</div>
+          <h3>Smart Controller<br>+ Transformer</h3>
+          <p>RCM-marked 60V AC driver with remote and WiFi app. Plug-and-play for the sparky on-site. One per panel up to 5 m².</p>
+          <div class="specs">
+            <div><span class="lbl">Input</span><span>240 V AC</span></div>
+            <div><span class="lbl">Output</span><span>60 V AC</span></div>
+            <div><span class="lbl">Load</span><span>up to 5 m²</span></div>
+            <div><span class="lbl">Control</span><span>RF + WiFi</span></div>
+            <div><span class="lbl">Cert</span><span>RCM, RoHS</span></div>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="sku">SKU · CS-KIT-01</div>
+          <h3>Connection<br>Kit</h3>
+          <p>Everything your installer needs to terminate the film cleanly. Conductive tape, lead wires, sealant, and a printed install card.</p>
+          <div class="specs">
+            <div><span class="lbl">Copper tape</span><span>5 m</span></div>
+            <div><span class="lbl">Cond. ink</span><span>10 ml</span></div>
+            <div><span class="lbl">Lead wires</span><span>2 × 1 m</span></div>
+            <div><span class="lbl">Sealant</span><span>15 g</span></div>
+            <div><span class="lbl">Guide</span><span>included</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing" class="pricing-section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">[ 04 ] Trade pricing</span>
+        <h2>Three tiers. One handshake.</h2>
+        <p>Tier 1 from your first order. Buy more, move up automatically. No haggling required.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="tier">
+          <div class="name">Tier 01</div>
+          <h4>Casual</h4>
+          <div class="qualif">First order &nbsp;·&nbsp; any volume</div>
+          <ul>
+            <li><span>Film (1–10 m²)</span><span>$260/m²</span></li>
+            <li><span>Film (10–30 m²)</span><span>$240/m²</span></li>
+            <li><span>Controller</span><span>$280</span></li>
+            <li><span>Connection kit</span><span>$45</span></li>
+          </ul>
+          <div class="terms">Terms · Prepaid</div>
+        </div>
+
+        <div class="tier feat">
+          <div class="name">Tier 02 · Approved</div>
+          <h4>Trade</h4>
+          <div class="qualif">After 5 orders OR one order &gt; $1,500</div>
+          <ul>
+            <li><span>Film (1–10 m²)</span><span>$220/m²</span></li>
+            <li><span>Film (10–30 m²)</span><span>$200/m²</span></li>
+            <li><span>Film (30 m²+)</span><span>$180/m²</span></li>
+            <li><span>Controller</span><span>$240</span></li>
+            <li><span>Connection kit</span><span>$35</span></li>
+          </ul>
+          <div class="terms">Terms · Prepaid → COD</div>
+        </div>
+
+        <div class="tier">
+          <div class="name">Tier 03 · Volume</div>
+          <h4>Account</h4>
+          <div class="qualif">$3k+/month &nbsp;·&nbsp; 6 months active</div>
+          <ul>
+            <li><span>Film (negotiable)</span><span>from $170/m²</span></li>
+            <li><span>Controller</span><span>$220</span></li>
+            <li><span>Connection kit</span><span>$30</span></li>
+            <li><span>Roll discounts</span><span>yes</span></li>
+            <li><span>Net 14 terms</span><span>by approval</span></li>
+          </ul>
+          <div class="terms">Terms · Net 14</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">[ 05 ] Answers</span>
+        <h2>What your client will ask you.</h2>
+        <p>Save these. They work in person, over the phone, on a quote.</p>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>How long does it last?</summary>
+          <p>Properly installed PDLC film has a manufacturer life expectation of 7–10 years indoors. Direct UV and moisture ingress at unsealed edges are the two main failure modes — which is why every order ships with the edge-sealing kit.</p>
+        </details>
+        <details>
+          <summary>Who wires it up?</summary>
+          <p>The film runs at 60V AC (extra-low voltage). The 240V mains connection to the transformer must be done by a licensed electrician under AS/NZS 3000. Our controllers are RCM-marked and ready to go.</p>
+        </details>
+        <details>
+          <summary>Can I retrofit it to existing glass?</summary>
+          <p>Yes — that's the whole point. The film applies to existing glass (interior side) with its self-adhesive backing. Clean glass, careful application, sealed edges. Allow around 30 minutes per square metre for a careful installer.</p>
+        </details>
+        <details>
+          <summary>What does the end client pay?</summary>
+          <p>Typical Australian residential installs retail between $500–1,600 per square metre installed depending on size, scope and trade. Your margin sits in the middle and is yours to set.</p>
+        </details>
+        <details>
+          <summary>What if a sheet arrives faulty?</summary>
+          <p>Bench-test before install — apply to a temporary glass panel, power up. If the sheet has dead zones, inconsistent haze, or won't switch, photograph and email within 7 days of delivery. We replace.</p>
+        </details>
+        <details>
+          <summary>Is it actually private when frosted?</summary>
+          <p>Yes — visually opaque. Light and colour pass through but no detail or silhouette. Suitable for bathrooms, meeting rooms, medical and dental rooms, executive offices.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact-section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">[ 06 ] Open a trade account</span>
+        <h2>Tell us what you'd like to quote.</h2>
+        <p>We'll come back to you within one business day with pricing and the next-batch lead time.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div><strong>Email</strong> trade@clearshift.com.au</div>
+          <div><strong>Phone</strong> 04XX XXX XXX</div>
+          <div><strong>Hours</strong> Mon–Fri · 7:00–17:00 AEST</div>
+          <div><strong>ABN</strong> XX XXX XXX XXX</div>
+          <div><strong>Service</strong> National · ships from supplier</div>
+          <br>
+          <div style="color: var(--taupe-light); font-size: 12px; line-height: 1.7; max-width: 320px; letter-spacing: 0;">
+            We sell to trades only — glaziers, tinters, shopfitters, builders, electricians, designers, and architects. If you're an end client, we'll happily refer you to one of our trade partners.
+          </div>
+        </div>
+
+        <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formSuccess').style.display='block'; this.scrollIntoView({behavior:'smooth', block:'end'});">
+          <div class="row">
+            <div class="field">
+              <label>Your name</label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="field">
+              <label>Business name</label>
+              <input type="text" name="business" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="field">
+              <label>Mobile</label>
+              <input type="tel" name="phone" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>Which trade are you?</label>
+            <select name="trade">
+              <option>Window tinter</option>
+              <option>Glazier</option>
+              <option>Shopfitter / commercial fitout</option>
+              <option>Builder / renovator</option>
+              <option>Electrician</option>
+              <option>Interior designer / architect</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>What's the first job you'd quote?</label>
+            <textarea name="job" placeholder="e.g. Bathroom window, 1.2 × 1.6 m, Hawthorn VIC. Site delivery."></textarea>
+          </div>
+          <button type="submit" class="btn btn-submit">Submit Trade Application →</button>
+          <div id="formSuccess" class="form-success">✓ Thanks — we'll be in touch within one business day.</div>
+          <p class="legal">By submitting, you confirm you're a trade buyer purchasing for installation or resale. Pricing is GST exclusive.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <a href="#" class="logo">
+          <div class="logo-tile">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="footHatch" patternUnits="userSpaceOnUse" width="2.2" height="2.2" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="2.2" stroke="#F4EDE0" stroke-width="0.55"/>
+                </pattern>
+                <clipPath id="footClip"><polygon points="3,3 21,3 3,21"/></clipPath>
+              </defs>
+              <rect x="3" y="3" width="18" height="18" stroke="#F4EDE0" stroke-width="1.3" fill="none"/>
+              <rect x="3" y="3" width="18" height="18" fill="url(#footHatch)" clip-path="url(#footClip)"/>
+              <line x1="21" y1="3" x2="3" y2="21" stroke="#F4EDE0" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="logo-text" style="color: var(--cream);">CLEARSHIFT</div>
+            <div class="logo-tag">Smart Film Co. · AU</div>
+          </div>
+        </a>
+        <div style="font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--taupe);">
+          Trade sales only
+        </div>
+      </div>
+      <div class="legal">
+        © 2026 CLEARSHIFT SMART FILM CO. PTY LTD &nbsp;·&nbsp; ABN XX XXX XXX XXX<br>
+        Smart film is a 60V AC switched electrical product. Mains connection to the transformer must be performed by a licensed electrician under AS/NZS 3000. Prices in AUD excluding GST. Australian Consumer Law applies. Dispatched direct from supply partner.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ 3D HERO DEMO ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+  <script>
+  (function () {
+    const canvas = document.getElementById('canvas3d');
+    const demoEl = document.getElementById('demo');
+    const toggleBtn = document.getElementById('toggleBtn');
+    const toggleTxt = document.getElementById('toggleTxt');
+    const statusTxt = document.getElementById('statusTxt');
+    if (!canvas || typeof THREE === 'undefined') return;
+
+    let renderer, scene, camera, glassMat;
+    let isOn = false, targetClear = 0, currentClear = 0;
+
+    function init() {
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      const r = canvas.getBoundingClientRect();
+      renderer.setSize(r.width, r.height, false);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.0;
+
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xEBE3D2);
+
+      camera = new THREE.PerspectiveCamera(38, r.width / r.height, 0.1, 100);
+      camera.position.set(0, 0.3, 5.2);
+      camera.lookAt(0, 0.1, 0);
+
+      // Warm interior lighting (cream/espresso world behind glass)
+      scene.add(new THREE.AmbientLight(0xfff3dc, 0.35));
+      const key = new THREE.PointLight(0xffd0a0, 14, 14, 1.6);
+      key.position.set(-0.6, 1.2, -2);
+      scene.add(key);
+      const fill = new THREE.PointLight(0xffb888, 6, 12, 1.8);
+      fill.position.set(1.4, 0.4, -2.2);
+      scene.add(fill);
+      const rim = new THREE.DirectionalLight(0xfff0dd, 0.3);
+      rim.position.set(2.5, 4, 5);
+      scene.add(rim);
+
+      // Backdrop wall — warm cream/sand gradient
+      const wallGeo = new THREE.PlaneGeometry(12, 8, 1, 4);
+      const colors = [];
+      const top = new THREE.Color(0xC5A985);
+      const bot = new THREE.Color(0x6B4F2C);
+      const pos = wallGeo.attributes.position;
+      for (let i = 0; i < pos.count; i++) {
+        const y = pos.getY(i);
+        const t = (y + 4) / 8;
+        const c = new THREE.Color().lerpColors(bot, top, t);
+        colors.push(c.r, c.g, c.b);
+      }
+      wallGeo.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+      const wall = new THREE.Mesh(wallGeo, new THREE.MeshBasicMaterial({ vertexColors: true }));
+      wall.position.set(0, 0, -3);
+      scene.add(wall);
+
+      // Floor
+      const floor = new THREE.Mesh(
+        new THREE.PlaneGeometry(12, 6),
+        new THREE.MeshStandardMaterial({ color: 0x3A3631, roughness: 0.85 })
+      );
+      floor.rotation.x = -Math.PI / 2;
+      floor.position.set(0, -1.4, -1.5);
+      scene.add(floor);
+
+      // Chair (warm wood tones)
+      const chairMat = new THREE.MeshStandardMaterial({ color: 0x6B4F2C, roughness: 0.7 });
+      const chairLegMat = new THREE.MeshStandardMaterial({ color: 0x2D2A26, roughness: 0.9 });
+      const chair = new THREE.Group();
+      const seat = new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.1, 0.55), chairMat);
+      seat.position.y = -0.7; chair.add(seat);
+      const back = new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.65, 0.08), chairMat);
+      back.position.set(0, -0.35, -0.23); chair.add(back);
+      for (let i = 0; i < 4; i++) {
+        const leg = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.65, 0.06), chairLegMat);
+        leg.position.set((i % 2 ? 1 : -1) * 0.3, -1.05, (i < 2 ? 1 : -1) * 0.22);
+        chair.add(leg);
+      }
+      chair.position.set(1.1, 0, -1.6);
+      chair.rotation.y = -0.5;
+      scene.add(chair);
+
+      // Plant
+      const pot = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.18, 0.14, 0.25, 16),
+        new THREE.MeshStandardMaterial({ color: 0x2D2A26, roughness: 0.8 })
+      );
+      pot.position.set(-1.4, -1.05, -1.4);
+      scene.add(pot);
+      const leafMat = new THREE.MeshStandardMaterial({ color: 0x4A3F2C, roughness: 0.6 });
+      for (let i = 0; i < 7; i++) {
+        const leaf = new THREE.Mesh(new THREE.ConeGeometry(0.07, 0.45 + Math.random() * 0.3, 6), leafMat);
+        const a = (i / 7) * Math.PI * 2;
+        leaf.position.set(-1.4 + Math.cos(a) * 0.06, -0.55 + Math.random() * 0.15, -1.4 + Math.sin(a) * 0.06);
+        leaf.rotation.z = Math.cos(a) * 0.3;
+        leaf.rotation.x = Math.sin(a) * 0.3;
+        scene.add(leaf);
+      }
+
+      // Pendant lamp
+      const lamp = new THREE.Mesh(
+        new THREE.SphereGeometry(0.16, 24, 24),
+        new THREE.MeshBasicMaterial({ color: 0xffcc88 })
+      );
+      lamp.position.set(0.4, 1.1, -1.8);
+      scene.add(lamp);
+      const cord = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.004, 0.004, 1.2),
+        new THREE.MeshBasicMaterial({ color: 0x2D2A26 })
+      );
+      cord.position.set(0.4, 1.75, -1.8);
+      scene.add(cord);
+
+      // Window frame (espresso)
+      const frameMat = new THREE.MeshStandardMaterial({ color: 0x2D2A26, metalness: 0.5, roughness: 0.45 });
+      const W = 2.2, H = 2.6, t = 0.1, d = 0.1;
+      const frame = new THREE.Group();
+      const top_ = new THREE.Mesh(new THREE.BoxGeometry(W + t * 2, t, d), frameMat);
+      top_.position.set(0, H/2, 0); frame.add(top_);
+      const bot_ = new THREE.Mesh(new THREE.BoxGeometry(W + t * 2, t, d), frameMat);
+      bot_.position.set(0, -H/2, 0); frame.add(bot_);
+      const left = new THREE.Mesh(new THREE.BoxGeometry(t, H, d), frameMat);
+      left.position.set(-W/2 - t/2, 0, 0); frame.add(left);
+      const right_ = new THREE.Mesh(new THREE.BoxGeometry(t, H, d), frameMat);
+      right_.position.set(W/2 + t/2, 0, 0); frame.add(right_);
+      const mull = new THREE.Mesh(new THREE.BoxGeometry(W, 0.035, d * 0.7), frameMat);
+      mull.position.set(0, 0, 0.01); frame.add(mull);
+      scene.add(frame);
+
+      // Glass panels
+      glassMat = new THREE.MeshPhysicalMaterial({
+        color: 0xffffff,
+        metalness: 0, roughness: 0,
+        ior: 1.45, thickness: 0.4,
+        transmission: 1, transparent: true, opacity: 1,
+        clearcoat: 0.5, clearcoatRoughness: 0.05,
+        side: THREE.DoubleSide,
+        attenuationColor: new THREE.Color(0xfbf2e0),
+        attenuationDistance: 6
+      });
+      const panelGeo = new THREE.PlaneGeometry(W, (H/2) - 0.035);
+      const top1 = new THREE.Mesh(panelGeo, glassMat);
+      top1.position.set(0, (H/4) + 0.018, 0.02);
+      const bot1 = new THREE.Mesh(panelGeo, glassMat);
+      bot1.position.set(0, -(H/4) - 0.018, 0.02);
+      scene.add(top1); scene.add(bot1);
+
+      window.addEventListener('resize', onResize);
+      demoEl.addEventListener('click', toggle);
+      animate();
+    }
+
+    function onResize() {
+      const r = canvas.getBoundingClientRect();
+      renderer.setSize(r.width, r.height, false);
+      camera.aspect = r.width / r.height;
+      camera.updateProjectionMatrix();
+    }
+
+    function toggle() {
+      isOn = !isOn;
+      targetClear = isOn ? 1 : 0;
+      toggleTxt.textContent = isOn ? 'Tap to Frost' : 'Tap to Activate';
+      statusTxt.textContent = isOn ? '60V AC · ON' : '60V AC · OFF';
+      if (isOn) demoEl.classList.add('is-on');
+      else demoEl.classList.remove('is-on');
+    }
+
+    let lastT = 0;
+    function animate(t = 0) {
+      const dt = Math.min((t - lastT) / 1000, 0.05);
+      lastT = t;
+      currentClear += (targetClear - currentClear) * Math.min(dt * 4.5, 1);
+      const inv = 1 - currentClear;
+      glassMat.roughness = inv * 0.62;
+      glassMat.transmission = 0.45 + currentClear * 0.55;
+      glassMat.thickness = 0.2 + inv * 0.6;
+      glassMat.color.setRGB(1, 0.985 + currentClear * 0.015, 0.96 + currentClear * 0.04);
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(() => {
+      try { init(); } catch (e) { console.error(e); canvas.style.display = 'none'; }
+    });
+  })();
+  </script>
+
+</body>
+</html>

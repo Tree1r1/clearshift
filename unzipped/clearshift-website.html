@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wholesale smart film supply for Australian trades. Direct-shipped PDLC switchable film at trade prices.">
+  <title>CLEARSHIFT — Smart Film, Trade Only. Australia.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@200..800&family=JetBrains+Mono:wght@300..600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0A0A0C;
+      --bg-elev: #111114;
+      --bg-card: #14141A;
+      --border: #1F1F25;
+      --border-light: #2A2A32;
+      --text: #F2EFEA;
+      --text-dim: #B8B3AB;
+      --text-mute: #6B665E;
+      --accent: #FFB54C;
+      --accent-dim: rgba(255, 181, 76, 0.15);
+      --glass-blue: #6BA8C9;
+      --danger: #E96C5A;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Manrope', -apple-system, system-ui, sans-serif;
+      font-weight: 300;
+      line-height: 1.55;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: -0.005em;
+    }
+
+    .serif { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
+    .mono  { font-family: 'JetBrains Mono', ui-monospace, monospace; font-weight: 400; letter-spacing: 0; }
+    .ital  { font-style: italic; }
+
+    /* ---------- Layout primitives ---------- */
+    .wrap { max-width: 1280px; margin: 0 auto; padding: 0 28px; }
+    @media (max-width: 720px) { .wrap { padding: 0 20px; } }
+
+    section { padding: 96px 0; border-top: 1px solid var(--border); }
+    @media (max-width: 720px) { section { padding: 64px 0; } }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .section-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-mute);
+      letter-spacing: 0.1em;
+    }
+
+    /* ---------- Top nav ---------- */
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10, 10, 12, 0.82);
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .row {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px; font-weight: 500;
+      letter-spacing: 0.16em;
+    }
+    .brand .dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 14px var(--accent);
+      animation: pulse 2.4s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.45; } }
+
+    nav.top .links { display: flex; gap: 32px; align-items: center; }
+    nav.top a {
+      color: var(--text-dim); text-decoration: none;
+      font-size: 13px; letter-spacing: 0.04em;
+      transition: color .2s ease;
+    }
+    nav.top a:hover { color: var(--text); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px;
+      background: var(--accent);
+      color: #0A0A0C;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none; cursor: pointer;
+      border-radius: 2px;
+      transition: transform .15s ease, background .2s ease;
+    }
+    .btn:hover { background: #FFC470; transform: translateY(-1px); }
+    .btn.ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border-light);
+    }
+    .btn.ghost:hover { background: var(--bg-card); border-color: var(--text-mute); }
+    @media (max-width: 720px) {
+      nav.top .links a:not(.btn) { display: none; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 80px 0 60px; position: relative; overflow: hidden; }
+    .hero .grid {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 56px;
+      align-items: center;
+    }
+    @media (max-width: 980px) {
+      .hero .grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    .hero h1 {
+      font-family: 'Instrument Serif', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(48px, 7vw, 96px);
+      line-height: 0.96;
+      letter-spacing: -0.025em;
+      margin-bottom: 24px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+      font-weight: 400;
+    }
+    .hero p.lead {
+      font-size: 18px;
+      color: var(--text-dim);
+      max-width: 480px;
+      margin-bottom: 32px;
+      line-height: 1.55;
+    }
+    .hero-meta {
+      display: flex; gap: 28px; margin-top: 40px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border);
+      max-width: 480px;
+    }
+    .hero-meta div {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-mute);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .hero-meta strong {
+      display: block;
+      font-family: 'Instrument Serif', serif;
+      font-size: 22px;
+      color: var(--text);
+      letter-spacing: 0;
+      text-transform: none;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    .hero-cta { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* ---------- 3D viewer ---------- */
+    .viewer {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1.05;
+      background: linear-gradient(180deg, #0E0E12 0%, #16161C 100%);
+      border: 1px solid var(--border-light);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    @media (max-width: 980px) {
+      .viewer { aspect-ratio: 1 / 1; }
+    }
+    .viewer canvas {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+      cursor: pointer;
+    }
+    .viewer .overlay {
+      position: absolute; inset: 0;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 18px;
+    }
+    .viewer .top-row {
+      display: flex; justify-content: space-between; align-items: flex-start;
+    }
+    .viewer .label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      background: rgba(10, 10, 12, 0.55);
+      backdrop-filter: blur(6px);
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+    }
+    .viewer .led {
+      display: flex; align-items: center; gap: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      background: rgba(10, 10, 12, 0.55);
+      backdrop-filter: blur(6px);
+      padding: 6px 10px;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      transition: color .3s ease, border-color .3s ease;
+    }
+    .viewer .led .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--text-mute);
+      transition: background .3s ease, box-shadow .3s ease;
+    }
+    .viewer.is-on .led { color: var(--accent); border-color: rgba(255, 181, 76, 0.4); }
+    .viewer.is-on .led .dot {
+      background: var(--accent);
+      box-shadow: 0 0 12px var(--accent);
+    }
+    .viewer .toggle-row {
+      display: flex; justify-content: center;
+      pointer-events: auto;
+    }
+    .viewer .toggle {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text);
+      background: rgba(10, 10, 12, 0.75);
+      backdrop-filter: blur(10px);
+      padding: 12px 18px;
+      border: 1px solid var(--border-light);
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .viewer .toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .viewer .toggle svg { width: 14px; height: 14px; }
+
+    .viewer .corner {
+      position: absolute;
+      width: 14px; height: 14px;
+      border-color: var(--text-mute);
+      border-style: solid;
+      border-width: 0;
+    }
+    .viewer .c-tl { top: 6px; left: 6px; border-top-width: 1px; border-left-width: 1px; }
+    .viewer .c-tr { top: 6px; right: 6px; border-top-width: 1px; border-right-width: 1px; }
+    .viewer .c-bl { bottom: 6px; left: 6px; border-bottom-width: 1px; border-left-width: 1px; }
+    .viewer .c-br { bottom: 6px; right: 6px; border-bottom-width: 1px; border-right-width: 1px; }
+
+    /* ---------- Stat strip ---------- */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      padding: 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    @media (max-width: 780px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+    .stat {
+      padding: 32px 24px;
+      border-right: 1px solid var(--border);
+    }
+    .stat:last-child { border-right: none; }
+    @media (max-width: 780px) {
+      .stat:nth-child(2) { border-right: none; }
+      .stat:nth-child(1), .stat:nth-child(2) { border-bottom: 1px solid var(--border); }
+    }
+    .stat .num {
+      font-family: 'Instrument Serif', serif;
+      font-size: 56px;
+      line-height: 1;
+      letter-spacing: -0.03em;
+      margin-bottom: 8px;
+    }
+    .stat .num em { font-style: italic; color: var(--accent); font-size: 0.7em; vertical-align: super; margin-left: 2px; }
+    .stat .lbl {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-mute);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ---------- Section heading ---------- */
+    .sec-head {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 40px;
+      align-items: baseline;
+      margin-bottom: 56px;
+    }
+    @media (max-width: 720px) { .sec-head { grid-template-columns: 1fr; gap: 12px; margin-bottom: 36px; } }
+    .sec-head h2 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(34px, 4.4vw, 56px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+    }
+    .sec-head h2 em { font-style: italic; color: var(--accent); }
+    .sec-head .meta { padding-top: 12px; }
+    .sec-head .meta p {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-mute);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ---------- Product grid ---------- */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 980px) { .products { grid-template-columns: 1fr; } }
+    .product {
+      background: var(--bg);
+      padding: 36px 32px;
+      display: flex; flex-direction: column;
+      min-height: 380px;
+      position: relative;
+    }
+    .product .sku {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-mute);
+      letter-spacing: 0.12em;
+      margin-bottom: 18px;
+    }
+    .product h3 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1.05;
+      letter-spacing: -0.015em;
+      margin-bottom: 14px;
+    }
+    .product p {
+      color: var(--text-dim);
+      font-size: 14.5px;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+    .product .specs {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-mute);
+      letter-spacing: 0.04em;
+      border-top: 1px solid var(--border);
+      padding-top: 18px;
+      line-height: 1.9;
+    }
+    .product .specs span { color: var(--text); }
+    .product .badge {
+      position: absolute; top: 24px; right: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 8px;
+      letter-spacing: 0.12em;
+    }
+
+    /* ---------- How it works ---------- */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    @media (max-width: 860px) { .steps { grid-template-columns: 1fr; } }
+    .step .n {
+      font-family: 'Instrument Serif', serif;
+      font-size: 72px;
+      line-height: 1;
+      color: var(--accent);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+    .step h4 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 26px;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .step p { color: var(--text-dim); font-size: 15px; max-width: 320px; }
+
+    /* ---------- Pricing ---------- */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    @media (max-width: 980px) { .pricing-grid { grid-template-columns: 1fr; } }
+    .tier { background: var(--bg); padding: 40px 32px; }
+    .tier.feat { background: var(--bg-card); }
+    .tier .name {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 8px;
+    }
+    .tier.feat .name { color: var(--accent); }
+    .tier h4 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: 32px;
+      margin-bottom: 6px;
+      letter-spacing: -0.015em;
+    }
+    .tier .qualif {
+      font-size: 13px;
+      color: var(--text-mute);
+      margin-bottom: 28px;
+    }
+    .tier ul { list-style: none; }
+    .tier li {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+    }
+    .tier li:last-child { border-bottom: 1px solid var(--border); }
+    .tier li span:last-child {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--text);
+    }
+    .tier li span:first-child { color: var(--text-dim); }
+    .tier .terms {
+      margin-top: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq { max-width: 880px; }
+    .faq details {
+      border-top: 1px solid var(--border);
+      padding: 24px 0;
+    }
+    .faq details:last-of-type { border-bottom: 1px solid var(--border); }
+    .faq summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex; justify-content: space-between; align-items: baseline;
+      font-family: 'Instrument Serif', serif;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      line-height: 1.3;
+      gap: 24px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: '+';
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      color: var(--accent);
+      font-weight: 400;
+      transition: transform .25s ease;
+      flex-shrink: 0;
+    }
+    .faq details[open] summary::after { content: '−'; }
+    .faq details p {
+      margin-top: 16px;
+      color: var(--text-dim);
+      font-size: 15px;
+      max-width: 720px;
+      line-height: 1.65;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+    @media (max-width: 860px) { .contact { grid-template-columns: 1fr; gap: 40px; } }
+    .contact h2 {
+      font-family: 'Instrument Serif', serif;
+      font-weight: 400;
+      font-size: clamp(40px, 5vw, 64px);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 24px;
+    }
+    .contact h2 em { font-style: italic; color: var(--accent); }
+    .contact p.lead { font-size: 16px; color: var(--text-dim); margin-bottom: 28px; }
+    .contact .info {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      line-height: 2;
+      color: var(--text-dim);
+      letter-spacing: 0.04em;
+    }
+    .contact .info strong {
+      color: var(--text-mute);
+      font-weight: 400;
+      display: inline-block;
+      width: 90px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 10.5px;
+    }
+
+    form .field { margin-bottom: 18px; }
+    form label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--text-mute);
+      margin-bottom: 8px;
+    }
+    form input, form select, form textarea {
+      width: 100%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      color: var(--text);
+      padding: 14px 16px;
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      border-radius: 2px;
+      transition: border-color .2s ease;
+    }
+    form input:focus, form select:focus, form textarea:focus {
+      outline: none; border-color: var(--accent);
+    }
+    form textarea { resize: vertical; min-height: 110px; }
+    form .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 540px) { form .row { grid-template-columns: 1fr; } }
+    form .btn { width: 100%; justify-content: center; padding: 16px; margin-top: 8px; }
+    form .legal {
+      margin-top: 14px;
+      font-size: 11.5px;
+      color: var(--text-mute);
+      line-height: 1.5;
+    }
+
+    /* ---------- Footer ---------- */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 48px 0 32px;
+      background: #07070A;
+    }
+    footer .row {
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: var(--text-mute);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    footer a { color: var(--text-mute); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+    footer .links { display: flex; gap: 24px; flex-wrap: wrap; }
+    footer .legal {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      color: var(--text-mute);
+      letter-spacing: 0.06em;
+      line-height: 1.8;
+    }
+
+    /* ---------- Misc ---------- */
+    .pull-quote {
+      font-family: 'Instrument Serif', serif;
+      font-style: italic;
+      font-size: clamp(28px, 3.5vw, 44px);
+      line-height: 1.2;
+      letter-spacing: -0.015em;
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--text-dim);
+    }
+    .pull-quote em { color: var(--accent); }
+
+    /* Grain overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      opacity: 0.025;
+      mix-blend-mode: overlay;
+      background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="top">
+    <div class="wrap row">
+      <div class="brand">
+        <span class="dot"></span>
+        CLEARSHIFT
+      </div>
+      <div class="links">
+        <a href="#products">Stock</a>
+        <a href="#how">Process</a>
+        <a href="#pricing">Trade Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="btn">Request Trade Access</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <div class="eyebrow" style="margin-bottom: 20px;">
+            ◇ &nbsp; PDLC Smart Film &nbsp;·&nbsp; Trade Supply &nbsp;·&nbsp; AU
+          </div>
+          <h1>
+            Glass that <em>switches</em>.<br>
+            Margins that <em>don't</em>.
+          </h1>
+          <p class="lead">
+            Direct-shipped PDLC switchable film for Australian glaziers, tinters, shopfitters and builders. We source it, you sell it, your client flicks a switch.
+          </p>
+          <div class="hero-cta">
+            <a href="#contact" class="btn">Request Trade Pricing →</a>
+            <a href="#products" class="btn ghost">View Stock List</a>
+          </div>
+          <div class="hero-meta">
+            <div>
+              Lead time
+              <strong>7–14 days</strong>
+            </div>
+            <div>
+              Tier-2 margin
+              <strong class="serif ital">~ 48%</strong>
+            </div>
+            <div>
+              MOQ
+              <strong>1 m²</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ 3D VIEWER ============ -->
+        <div class="viewer" id="viewer">
+          <canvas id="canvas3d"></canvas>
+          <div class="overlay">
+            <div class="top-row">
+              <div class="label">CLEARSHIFT · DEMO UNIT 001</div>
+              <div class="led" id="led">
+                <span class="dot"></span><span id="ledTxt">60V AC · OFF</span>
+              </div>
+            </div>
+            <div class="toggle-row">
+              <button class="toggle" id="toggleBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 3v9M6 7a8 8 0 1 0 12 0" stroke-linecap="round"/>
+                </svg>
+                <span id="toggleTxt">Tap to Activate</span>
+              </button>
+            </div>
+          </div>
+          <div class="corner c-tl"></div>
+          <div class="corner c-tr"></div>
+          <div class="corner c-bl"></div>
+          <div class="corner c-br"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ STATS ============ -->
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat">
+        <div class="num">A$55<em>/m²</em></div>
+        <div class="lbl">Landed Cost</div>
+      </div>
+      <div class="stat">
+        <div class="num">A$180+<em>/m²</em></div>
+        <div class="lbl">Your Trade Price</div>
+      </div>
+      <div class="stat">
+        <div class="num">7–14<em>d</em></div>
+        <div class="lbl">Door to Door</div>
+      </div>
+      <div class="stat">
+        <div class="num">0<em>%</em></div>
+        <div class="lbl">Install Hassle</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ PRODUCTS ============ -->
+  <section id="products">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="section-num">[ 01 / STOCK LIST ]</div>
+        <div>
+          <h2>What we <em>ship</em>.</h2>
+          <div class="meta"><p>Three SKUs · No bullshit · Order today, on a boat tomorrow.</p></div>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product">
+          <div class="badge">Workhorse</div>
+          <div class="sku">SKU · CS-PDLC-W12</div>
+          <h3>Standard White<br>PDLC Film</h3>
+          <p>Self-adhesive switchable film. Clear when powered, frosted when not. The product you sell 80% of the time.</p>
+          <div class="specs">
+            Width&nbsp;&nbsp;<span>1200 mm</span><br>
+            Roll&nbsp;&nbsp;&nbsp;<span>30 m × 1.2 m</span><br>
+            LT&nbsp;&nbsp;&nbsp;&nbsp;<span>88% (clear)</span><br>
+            Drive&nbsp;&nbsp;<span>48–65 V AC</span><br>
+            Haze&nbsp;&nbsp;&nbsp;<span>&lt; 5% clear</span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="sku">SKU · CS-CTL-60</div>
+          <h3>Smart Controller<br>+ Transformer</h3>
+          <p>RCM-marked 60V AC driver with remote and app control. Plug-and-play for the sparky on-site.</p>
+          <div class="specs">
+            Input&nbsp;&nbsp;<span>240 V AC</span><br>
+            Output&nbsp;<span>60 V AC</span><br>
+            Load&nbsp;&nbsp;&nbsp;<span>up to 5 m²</span><br>
+            Control&nbsp;<span>RF + WiFi</span><br>
+            Cert&nbsp;&nbsp;&nbsp;<span>RCM, RoHS</span>
+          </div>
+        </div>
+
+        <div class="product">
+          <div class="sku">SKU · CS-KIT-01</div>
+          <h3>Connection<br>Kit</h3>
+          <p>Everything your installer needs to terminate the film cleanly. Conductive tape, lead wires, sealant, install card.</p>
+          <div class="specs">
+            Copper tape&nbsp;<span>5 m</span><br>
+            Conductive ink&nbsp;<span>10 ml</span><br>
+            Lead wires&nbsp;<span>2 × 1 m</span><br>
+            Edge sealant&nbsp;<span>15 g</span><br>
+            Guide&nbsp;<span>included</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PULL QUOTE ============ -->
+  <section style="padding: 80px 0;">
+    <div class="wrap">
+      <p class="pull-quote">
+        Your client doesn't need to know where the film comes from. <em>They need it to work, and look like magic when it does.</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="section-num">[ 02 / PROCESS ]</div>
+        <div>
+          <h2>How it <em>actually</em> works.</h2>
+          <div class="meta"><p>Three steps. No middlemen between us and the factory.</p></div>
+        </div>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="n">i.</div>
+          <h4>You quote, you order</h4>
+          <p>Send us the dimensions and quantity. We confirm price and lead time the same day. Pay by card or transfer.</p>
+        </div>
+        <div class="step">
+          <div class="n">ii.</div>
+          <h4>We dispatch direct</h4>
+          <p>Film ships from our supply partner straight to the job site or your workshop. Tracking, customs and GST handled.</p>
+        </div>
+        <div class="step">
+          <div class="n">iii.</div>
+          <h4>You install &amp; bill</h4>
+          <p>Your installer applies the film, the sparky wires the transformer. You bill your client. Margin stays yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRICING ============ -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="section-num">[ 03 / TRADE PRICING ]</div>
+        <div>
+          <h2>Three tiers. <em>One handshake.</em></h2>
+          <div class="meta"><p>Tier 1 from your first order. Move up by buying more.</p></div>
+        </div>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="tier">
+          <div class="name">Tier 01</div>
+          <h4>Casual</h4>
+          <div class="qualif">First order &nbsp;/&nbsp; any volume</div>
+          <ul>
+            <li><span>Film (1–10 m²)</span><span>A$260/m²</span></li>
+            <li><span>Film (10–30 m²)</span><span>A$240/m²</span></li>
+            <li><span>Controller</span><span>A$280</span></li>
+            <li><span>Connection kit</span><span>A$45</span></li>
+          </ul>
+          <div class="terms">Terms · Prepaid</div>
+        </div>
+
+        <div class="tier feat">
+          <div class="name">Tier 02 · Approved</div>
+          <h4>Trade</h4>
+          <div class="qualif">5 orders OR one order &gt; A$1,500</div>
+          <ul>
+            <li><span>Film (1–10 m²)</span><span>A$220/m²</span></li>
+            <li><span>Film (10–30 m²)</span><span>A$200/m²</span></li>
+            <li><span>Film (30 m²+)</span><span>A$180/m²</span></li>
+            <li><span>Controller</span><span>A$240</span></li>
+            <li><span>Connection kit</span><span>A$35</span></li>
+          </ul>
+          <div class="terms">Terms · Prepaid → COD</div>
+        </div>
+
+        <div class="tier">
+          <div class="name">Tier 03 · Volume</div>
+          <h4>Account</h4>
+          <div class="qualif">A$3k+ monthly &nbsp;/&nbsp; 6 months active</div>
+          <ul>
+            <li><span>Film (negotiable)</span><span>from A$170/m²</span></li>
+            <li><span>Controller</span><span>A$220</span></li>
+            <li><span>Connection kit</span><span>A$30</span></li>
+            <li><span>Whole-roll discount</span><span>yes</span></li>
+            <li><span>Net 14 terms</span><span>available</span></li>
+          </ul>
+          <div class="terms">Terms · Net 14 by approval</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="section-num">[ 04 / FAQ ]</div>
+        <div>
+          <h2>Questions <em>you'll get</em><br>from your client.</h2>
+          <div class="meta"><p>Use these answers. They work.</p></div>
+        </div>
+      </div>
+
+      <div class="faq">
+        <details>
+          <summary>How long does it last?</summary>
+          <p>Properly installed PDLC film carries a manufacturer life expectation of 7–10 years in normal indoor conditions. Direct UV and moisture ingress at unsealed edges are the two biggest enemies — which is why we ship every film with the edge-sealing kit.</p>
+        </details>
+        <details>
+          <summary>Who wires it up?</summary>
+          <p>The film itself operates at 60V AC (extra-low voltage). The 240V mains connection to the transformer must be done by a licensed electrician under AS/NZS 3000. Our controllers are RCM-marked and ready to install on the load side.</p>
+        </details>
+        <details>
+          <summary>Can I retrofit it to existing windows?</summary>
+          <p>Yes — that's the whole point. The film applies to existing glass (interior side) with its self-adhesive backing. Clean glass, careful application, sealed edges. Allow ~30 minutes per square metre for a careful installer.</p>
+        </details>
+        <details>
+          <summary>What does the end client pay?</summary>
+          <p>Typical residential installs in Australia retail between A$500–1,600 per square metre installed depending on size, scope and trade. Your margin sits in the middle and is yours to set.</p>
+        </details>
+        <details>
+          <summary>What if a sheet arrives faulty?</summary>
+          <p>Bench-test before install — apply to a temporary glass test panel, power up. If the sheet has dead zones, hazing inconsistency or won't switch, photograph and email within 7 days of delivery. We replace.</p>
+        </details>
+        <details>
+          <summary>Is it actually private when frosted?</summary>
+          <p>Yes — visually opaque. You see colour and light through it but no detail or silhouette. Suitable for bathrooms, meeting rooms, medical rooms, executive offices.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" style="background: var(--bg-elev);">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <div class="section-num" style="margin-bottom: 24px;">[ 05 / TRADE ACCESS ]</div>
+          <h2>Open a <em>trade account</em>.</h2>
+          <p class="lead">Tell us what you do and what you'd like to quote. We'll be back to you within one business day with pricing and the next-batch lead time.</p>
+
+          <div class="info">
+            <div><strong>Email</strong> trade@clearshift.com.au</div>
+            <div><strong>Phone</strong> 04XX XXX XXX</div>
+            <div><strong>Hours</strong> Mon–Fri · 7:00 – 17:00 AEST</div>
+            <div><strong>ABN</strong> XX XXX XXX XXX</div>
+            <div><strong>Service</strong> National · ships from supplier</div>
+          </div>
+        </div>
+
+        <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('formMsg').style.display='block';">
+          <div class="row">
+            <div class="field">
+              <label>Your Name</label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="field">
+              <label>Business Name</label>
+              <input type="text" name="business" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+            <div class="field">
+              <label>Mobile</label>
+              <input type="tel" name="phone" required>
+            </div>
+          </div>
+          <div class="field">
+            <label>What trade are you?</label>
+            <select name="trade">
+              <option>Window tinter</option>
+              <option>Glazier</option>
+              <option>Shopfitter / commercial fitout</option>
+              <option>Builder / renovator</option>
+              <option>Electrician</option>
+              <option>Interior designer / architect</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>What's the first job you'd quote?</label>
+            <textarea name="job" placeholder="e.g. Bathroom window, 1.2 × 1.6m, Hawthorn VIC. Job site delivery."></textarea>
+          </div>
+          <button type="submit" class="btn">Submit Trade Application →</button>
+          <div id="formMsg" style="display:none; margin-top: 16px; padding: 14px; background: var(--accent-dim); border: 1px solid var(--accent); color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.06em;">
+            ✓ Thanks — we'll be in touch within 1 business day.
+          </div>
+          <p class="legal">By submitting, you confirm you're a trade buyer purchasing for installation or resale to an end customer. Pricing is GST exclusive.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="row">
+        <div class="brand">
+          <span class="dot"></span>
+          CLEARSHIFT
+        </div>
+        <div class="links">
+          <a href="#products">Stock</a>
+          <a href="#how">Process</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Trade Access</a>
+        </div>
+      </div>
+      <div class="legal">
+        © 2026 CLEARSHIFT TRADE PTY LTD · ABN XX XXX XXX XXX · TRADE SALES ONLY<br>
+        SMART FILM IS A 60V AC SWITCHED ELECTRICAL PRODUCT · MAINS CONNECTION REQUIRES A LICENSED ELECTRICIAN UNDER AS/NZS 3000 · PRICES IN AUD EXCLUDING GST · DISPATCHED EX SUPPLIER, AUSTRALIAN CONSUMER LAW APPLIES
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ THREE.JS DEMO ============ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r160/three.min.js"></script>
+  <script>
+  (function () {
+    const canvas = document.getElementById('canvas3d');
+    const viewer = document.getElementById('viewer');
+    const toggleBtn = document.getElementById('toggleBtn');
+    const toggleTxt = document.getElementById('toggleTxt');
+    const ledTxt = document.getElementById('ledTxt');
+
+    if (!canvas || typeof THREE === 'undefined') return;
+
+    let renderer, scene, camera, glass, interior;
+    let isOn = false;
+    let targetClear = 0;      // 0 = frosted, 1 = clear
+    let currentClear = 0;
+    let mouseX = 0, mouseY = 0;
+    let mTargetX = 0, mTargetY = 0;
+
+    function init() {
+      // Renderer
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      const r = canvas.getBoundingClientRect();
+      renderer.setSize(r.width, r.height, false);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.1;
+
+      // Scene + camera
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0x0E0E12);
+      camera = new THREE.PerspectiveCamera(40, r.width / r.height, 0.1, 100);
+      camera.position.set(0, 0.4, 5.2);
+      camera.lookAt(0, 0.2, 0);
+
+      // Environment (simple PMREM-style ambient lighting via lights)
+      const ambient = new THREE.AmbientLight(0xffe6c0, 0.18);
+      scene.add(ambient);
+
+      // Warm key light from INSIDE the room (behind the glass, lighting the interior)
+      const keyLight = new THREE.PointLight(0xffaa55, 18, 14, 1.6);
+      keyLight.position.set(-0.8, 1.4, -2);
+      scene.add(keyLight);
+
+      const fillLight = new THREE.PointLight(0xff8855, 8, 12, 1.8);
+      fillLight.position.set(1.2, 0.6, -2.2);
+      scene.add(fillLight);
+
+      // Subtle cool rim light from outside (camera side)
+      const rim = new THREE.DirectionalLight(0x6688aa, 0.4);
+      rim.position.set(3, 4, 5);
+      scene.add(rim);
+
+      // ---------- BACKGROUND ROOM ----------
+      interior = new THREE.Group();
+
+      // Backdrop wall — warm gradient using vertex colors
+      const wallGeo = new THREE.PlaneGeometry(12, 8, 1, 4);
+      const wallColors = [];
+      const top    = new THREE.Color(0x3a1f0e);
+      const mid    = new THREE.Color(0x6b3a18);
+      const bottom = new THREE.Color(0x2a1408);
+      const palette = [top, top, mid, mid, bottom, bottom, bottom, bottom, bottom, bottom];
+      const pos = wallGeo.attributes.position;
+      for (let i = 0; i < pos.count; i++) {
+        const y = pos.getY(i);
+        const t = (y + 4) / 8;
+        const c = new THREE.Color().lerpColors(bottom, top, t);
+        // boost mid
+        if (t > 0.3 && t < 0.7) c.lerp(new THREE.Color(0x8a4a1c), 0.4);
+        wallColors.push(c.r, c.g, c.b);
+      }
+      wallGeo.setAttribute('color', new THREE.Float32BufferAttribute(wallColors, 3));
+      const wallMat = new THREE.MeshBasicMaterial({ vertexColors: true });
+      const wall = new THREE.Mesh(wallGeo, wallMat);
+      wall.position.set(0, 0, -3);
+      interior.add(wall);
+
+      // Floor
+      const floorGeo = new THREE.PlaneGeometry(12, 6);
+      const floorMat = new THREE.MeshStandardMaterial({ color: 0x1f1208, roughness: 0.9 });
+      const floor = new THREE.Mesh(floorGeo, floorMat);
+      floor.rotation.x = -Math.PI / 2;
+      floor.position.set(0, -1.4, -1.5);
+      interior.add(floor);
+
+      // Stylized plant (a few cone-leaves on a pot)
+      const plantGroup = new THREE.Group();
+      const potMat = new THREE.MeshStandardMaterial({ color: 0x2a1810, roughness: 0.85 });
+      const pot = new THREE.Mesh(new THREE.CylinderGeometry(0.18, 0.14, 0.25, 16), potMat);
+      pot.position.y = -1.05;
+      plantGroup.add(pot);
+      const leafMat = new THREE.MeshStandardMaterial({ color: 0x3d2a14, roughness: 0.7 });
+      for (let i = 0; i < 7; i++) {
+        const leaf = new THREE.Mesh(new THREE.ConeGeometry(0.08, 0.55 + Math.random() * 0.3, 6), leafMat);
+        const a = (i / 7) * Math.PI * 2;
+        leaf.position.set(Math.cos(a) * 0.07, -0.55 + Math.random() * 0.2, Math.sin(a) * 0.07);
+        leaf.rotation.z = Math.cos(a) * 0.3;
+        leaf.rotation.x = Math.sin(a) * 0.3;
+        plantGroup.add(leaf);
+      }
+      plantGroup.position.set(-1.4, 0, -1.4);
+      interior.add(plantGroup);
+
+      // Stylized chair (a low boxy silhouette)
+      const chairGroup = new THREE.Group();
+      const chairMat = new THREE.MeshStandardMaterial({ color: 0x4a2a14, roughness: 0.8 });
+      const chairSeat = new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.12, 0.55), chairMat);
+      chairSeat.position.y = -0.7;
+      chairGroup.add(chairSeat);
+      const chairBack = new THREE.Mesh(new THREE.BoxGeometry(0.7, 0.7, 0.08), chairMat);
+      chairBack.position.set(0, -0.32, -0.23);
+      chairGroup.add(chairBack);
+      const legMat = new THREE.MeshStandardMaterial({ color: 0x1a0e06, roughness: 0.9 });
+      for (let i = 0; i < 4; i++) {
+        const leg = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.65, 0.06), legMat);
+        leg.position.set((i % 2 ? 1 : -1) * 0.3, -1.05, (i < 2 ? 1 : -1) * 0.22);
+        chairGroup.add(leg);
+      }
+      chairGroup.position.set(1.1, 0, -1.6);
+      chairGroup.rotation.y = -0.5;
+      interior.add(chairGroup);
+
+      // Pendant lamp (a glowing sphere up high)
+      const lamp = new THREE.Mesh(
+        new THREE.SphereGeometry(0.18, 24, 24),
+        new THREE.MeshBasicMaterial({ color: 0xffcc77 })
+      );
+      lamp.position.set(0.4, 1.2, -1.8);
+      interior.add(lamp);
+      // Lamp cord
+      const cord = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.005, 0.005, 1.2),
+        new THREE.MeshBasicMaterial({ color: 0x110a04 })
+      );
+      cord.position.set(0.4, 1.85, -1.8);
+      interior.add(cord);
+
+      scene.add(interior);
+
+      // ---------- WINDOW FRAME ----------
+      const frameMat = new THREE.MeshStandardMaterial({
+        color: 0x14141a,
+        metalness: 0.85,
+        roughness: 0.35
+      });
+      const frameGroup = new THREE.Group();
+      const W = 2.2, H = 2.6, t = 0.12, d = 0.12;
+      // Four sides
+      const top_ = new THREE.Mesh(new THREE.BoxGeometry(W + t * 2, t, d), frameMat);
+      top_.position.set(0, H / 2, 0); frameGroup.add(top_);
+      const bot_ = new THREE.Mesh(new THREE.BoxGeometry(W + t * 2, t, d), frameMat);
+      bot_.position.set(0, -H / 2, 0); frameGroup.add(bot_);
+      const left = new THREE.Mesh(new THREE.BoxGeometry(t, H, d), frameMat);
+      left.position.set(-W / 2 - t / 2, 0, 0); frameGroup.add(left);
+      const right_ = new THREE.Mesh(new THREE.BoxGeometry(t, H, d), frameMat);
+      right_.position.set(W / 2 + t / 2, 0, 0); frameGroup.add(right_);
+
+      // Horizontal mullion
+      const mull = new THREE.Mesh(new THREE.BoxGeometry(W, 0.04, d * 0.7), frameMat);
+      mull.position.set(0, 0, 0.01);
+      frameGroup.add(mull);
+
+      scene.add(frameGroup);
+
+      // ---------- GLASS PANELS (top and bottom of mullion) ----------
+      const glassMat = new THREE.MeshPhysicalMaterial({
+        color: 0xffffff,
+        metalness: 0,
+        roughness: 0,            // animated 0 → 0.55
+        ior: 1.45,
+        thickness: 0.4,
+        transmission: 1,         // animated 0.5 → 1
+        transparent: true,
+        opacity: 1,
+        clearcoat: 0.6,
+        clearcoatRoughness: 0.05,
+        side: THREE.DoubleSide,
+        attenuationColor: new THREE.Color(0xf0e8d8),
+        attenuationDistance: 6
+      });
+
+      const panelGeo = new THREE.PlaneGeometry(W, (H / 2) - 0.04);
+      const panelTop = new THREE.Mesh(panelGeo, glassMat);
+      panelTop.position.set(0, (H / 4) + 0.02, 0.02);
+      const panelBot = new THREE.Mesh(panelGeo, glassMat);
+      panelBot.position.set(0, -(H / 4) - 0.02, 0.02);
+
+      scene.add(panelTop);
+      scene.add(panelBot);
+      glass = glassMat; // we tween the material
+
+      // Floor stage subtle reflection sense via shadow plane catch
+      // (skipped — too costly on mobile)
+
+      // Resize
+      window.addEventListener('resize', onResize);
+      onResize();
+
+      // Mouse parallax
+      window.addEventListener('mousemove', (e) => {
+        const cx = window.innerWidth / 2;
+        const cy = window.innerHeight / 2;
+        mTargetX = (e.clientX - cx) / cx;
+        mTargetY = (e.clientY - cy) / cy;
+      });
+
+      // Click anywhere on the viewer toggles
+      viewer.addEventListener('click', (e) => {
+        // also fires for the button; that's fine
+        toggle();
+      });
+
+      animate();
+    }
+
+    function onResize() {
+      const r = canvas.getBoundingClientRect();
+      renderer.setSize(r.width, r.height, false);
+      camera.aspect = r.width / r.height;
+      camera.updateProjectionMatrix();
+    }
+
+    function toggle() {
+      isOn = !isOn;
+      targetClear = isOn ? 1 : 0;
+      toggleTxt.textContent = isOn ? 'Tap to Frost' : 'Tap to Activate';
+      ledTxt.textContent = isOn ? '60V AC · ON' : '60V AC · OFF';
+      if (isOn) viewer.classList.add('is-on');
+      else viewer.classList.remove('is-on');
+    }
+
+    let lastT = 0;
+    function animate(t = 0) {
+      const dt = Math.min((t - lastT) / 1000, 0.05);
+      lastT = t;
+
+      // ease state
+      currentClear += (targetClear - currentClear) * Math.min(dt * 4.5, 1);
+
+      // Glass material params
+      // When clear (1): roughness 0, transmission 1
+      // When frosted (0): roughness 0.55, transmission 0.45, slight white tint
+      const inv = 1 - currentClear;
+      glass.roughness = inv * 0.62;
+      glass.transmission = 0.45 + currentClear * 0.55;
+      glass.opacity = 1;
+      glass.color.setRGB(
+        1.0,
+        0.985 + currentClear * 0.015,
+        0.97 + currentClear * 0.03
+      );
+      glass.thickness = 0.2 + inv * 0.6;
+
+      // Subtle parallax — camera moves a tiny amount
+      mouseX += (mTargetX - mouseX) * 0.04;
+      mouseY += (mTargetY - mouseY) * 0.04;
+      camera.position.x = mouseX * 0.25;
+      camera.position.y = 0.4 - mouseY * 0.15;
+      camera.lookAt(0, 0.2, 0);
+
+      // Subtle lamp flicker when ON
+      if (isOn && interior) {
+        const flicker = 1 + Math.sin(t * 0.004) * 0.03 + Math.sin(t * 0.011) * 0.02;
+        scene.children.forEach(c => {
+          if (c.isPointLight) c.intensity = (c === scene.children[1] ? 18 : 8) * flicker;
+        });
+      }
+
+      renderer.render(scene, camera);
+      requestAnimationFrame(animate);
+    }
+
+    // Wait one frame for layout
+    requestAnimationFrame(() => {
+      try { init(); }
+      catch (e) {
+        console.error('3D demo failed:', e);
+        canvas.style.display = 'none';
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CLEARSHIFT — Logo Concepts</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #F5F2EC;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #1a1a1a;
+    padding: 48px 24px;
+  }
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header {
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #d4ccc0;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  header p {
+    color: #6b665e;
+    font-size: 14px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 720px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.05);
+  }
+  .logo-block {
+    height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 32px;
+  }
+  .meta {
+    padding: 20px 24px;
+    border-top: 1px solid #f0ece4;
+  }
+  .meta .name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .meta .desc {
+    color: #6b665e;
+    font-size: 12.5px;
+    line-height: 1.5;
+  }
+  .meta .colors {
+    margin-top: 12px;
+    display: flex;
+    gap: 6px;
+    font-family: ui-monospace, monospace;
+    font-size: 10.5px;
+    color: #8a8378;
+  }
+  .swatch {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.08);
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  /* Logo block backgrounds */
+  .bg-1 { background: #0E2954; }              /* deep navy — closest to reference */
+  .bg-2 { background: #0A0A0C; }              /* near black */
+  .bg-3 { background: #1A1A1A; }              /* charcoal */
+  .bg-4 { background: #F2EFEA; }              /* warm off-white (inverted) */
+  .bg-5 { background: linear-gradient(135deg, #1B2845 0%, #0E1730 100%); }
+  .bg-6 { background: #C9522F; }              /* burnt orange — bold differentiator */
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #d4ccc0;
+    color: #6b665e;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  footer strong { color: #1a1a1a; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>CLEARSHIFT — Logo Concepts</h1>
+      <p>Six directions. Same wordmark family, different icon and palette. Pick one (or mix elements) and I'll polish the winner into a finished asset pack.</p>
+    </header>
+
+    <div class="grid">
+
+      <!-- =============== LOGO 01 — Switching Pane =============== -->
+      <div class="card">
+        <div class="logo-block bg-1">
+          <svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Icon: window split into frosted + clear halves -->
+            <g stroke="white" stroke-width="3" fill="none">
+              <!-- frame -->
+              <rect x="20" y="30" width="100" height="80" rx="2"/>
+              <!-- vertical mullion -->
+              <line x1="70" y1="30" x2="70" y2="110"/>
+              <!-- left pane: frosted (vertical lines) -->
+              <line x1="30" y1="40" x2="30" y2="100" stroke-width="2"/>
+              <line x1="40" y1="40" x2="40" y2="100" stroke-width="2"/>
+              <line x1="50" y1="40" x2="50" y2="100" stroke-width="2"/>
+              <line x1="60" y1="40" x2="60" y2="100" stroke-width="2"/>
+              <!-- right pane: clear (empty) — small arrow indicating switch -->
+            </g>
+            <!-- small switch arrow between panes -->
+            <path d="M 65 70 L 75 70 M 72 67 L 75 70 L 72 73" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+            <!-- Wordmark -->
+            <text x="155" y="72" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="32" letter-spacing="0.5" fill="white">CLEAR</text>
+            <text x="155" y="108" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="32" letter-spacing="0.5" fill="white">SHIFT</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">01 — The Direct Hit</div>
+          <div class="desc">Stacked wordmark + literal switching-window icon (frosted on the left, clear on the right). Closest in spirit to your Blinds Downunder reference — straightforward, trade-friendly, instantly readable.</div>
+          <div class="colors"><span><span class="swatch" style="background:#0E2954"></span>#0E2954</span> <span><span class="swatch" style="background:white"></span>#FFFFFF</span></div>
+        </div>
+      </div>
+
+      <!-- =============== LOGO 02 — Minimal Toggle =============== -->
+      <div class="card">
+        <div class="logo-block bg-2">
+          <svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Icon: minimalist circle + line (off/on toggle) -->
+            <g stroke="#FFB54C" stroke-width="3.5" fill="none" stroke-linecap="round">
+              <!-- power-style mark: arc + vertical line -->
+              <path d="M 50 40 A 32 32 0 1 0 90 40"/>
+              <line x1="70" y1="28" x2="70" y2="65"/>
+            </g>
+
+            <!-- Wordmark inline, single line -->
+            <text x="135" y="92" font-family="Helvetica, Arial, sans-serif" font-weight="200" font-size="42" letter-spacing="2" fill="white">CLEAR</text>
+            <text x="295" y="92" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="42" letter-spacing="2" fill="#FFB54C">SHIFT</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">02 — The Power Mark</div>
+          <div class="desc">A power-button icon (PDLC literally switches on) with a contrast wordmark — thin "CLEAR" + bold accented "SHIFT". Modern, tech-forward, premium. Good if you want to look more like a product brand than a tradie supplier.</div>
+          <div class="colors"><span><span class="swatch" style="background:#0A0A0C"></span>#0A0A0C</span> <span><span class="swatch" style="background:#FFB54C"></span>#FFB54C</span> <span><span class="swatch" style="background:white"></span>#FFFFFF</span></div>
+        </div>
+      </div>
+
+      <!-- =============== LOGO 03 — Geometric Mark =============== -->
+      <div class="card">
+        <div class="logo-block bg-3">
+          <svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Icon: two squares offset — one outlined, one filled — geometric "shift" -->
+            <g>
+              <rect x="25" y="35" width="58" height="58" stroke="white" stroke-width="3" fill="none"/>
+              <rect x="50" y="55" width="58" height="58" fill="white"/>
+              <!-- overlap area appears layered -->
+            </g>
+
+            <!-- Wordmark stacked, modern sans -->
+            <text x="150" y="72" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="30" letter-spacing="3" fill="white">CLEARSHIFT</text>
+            <text x="150" y="100" font-family="Helvetica, Arial, sans-serif" font-weight="400" font-size="11" letter-spacing="6" fill="#9a9a9a">SMART FILM · TRADE SUPPLY</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">03 — The Geometric</div>
+          <div class="desc">Two offset squares — one outline, one filled — abstractly representing the "shift" between transparent and opaque states. With a tagline lockup underneath. Sophisticated, agency-grade, ages well.</div>
+          <div class="colors"><span><span class="swatch" style="background:#1A1A1A"></span>#1A1A1A</span> <span><span class="swatch" style="background:white"></span>#FFFFFF</span></div>
+        </div>
+      </div>
+
+      <!-- =============== LOGO 04 — Inverted / Light =============== -->
+      <div class="card">
+        <div class="logo-block bg-4">
+          <svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Icon: clean window with diagonal split = transition state -->
+            <g>
+              <rect x="20" y="30" width="100" height="80" rx="2" stroke="#0E2954" stroke-width="3" fill="none"/>
+              <!-- diagonal showing transition: top-left frosted, bottom-right clear -->
+              <defs>
+                <pattern id="frostPattern" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="6" stroke="#0E2954" stroke-width="1.2"/>
+                </pattern>
+                <clipPath id="frostClip">
+                  <polygon points="20,30 120,30 20,110"/>
+                </clipPath>
+              </defs>
+              <rect x="20" y="30" width="100" height="80" fill="url(#frostPattern)" clip-path="url(#frostClip)"/>
+              <!-- diagonal line -->
+              <line x1="120" y1="30" x2="20" y2="110" stroke="#0E2954" stroke-width="3"/>
+            </g>
+
+            <!-- Wordmark — serif for premium feel -->
+            <text x="155" y="72" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="34" fill="#0E2954">Clear</text>
+            <text x="155" y="108" font-family="Georgia, 'Times New Roman', serif" font-weight="400" font-size="34" font-style="italic" fill="#0E2954">shift.</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">04 — The Editorial</div>
+          <div class="desc">Serif wordmark with a diagonal-split window icon. Premium, architectural, more "design studio" than "trade supplier" — appeals to architects, interior designers, and high-end fitout buyers. Different vibe entirely, included so you can see the range.</div>
+          <div class="colors"><span><span class="swatch" style="background:#F2EFEA"></span>#F2EFEA</span> <span><span class="swatch" style="background:#0E2954"></span>#0E2954</span></div>
+        </div>
+      </div>
+
+      <!-- =============== LOGO 05 — Monogram + Wordmark =============== -->
+      <div class="card">
+        <div class="logo-block bg-5">
+          <svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Icon: CS monogram inside a rounded square (versatile for app icon, social) -->
+            <rect x="25" y="30" width="80" height="80" rx="14" fill="white"/>
+            <text x="65" y="83" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="38" letter-spacing="-2" fill="#0E1730">CS</text>
+
+            <!-- Wordmark stacked, all caps, condensed feel -->
+            <text x="135" y="68" font-family="Helvetica, Arial, sans-serif" font-weight="800" font-size="28" letter-spacing="2" fill="white">CLEARSHIFT</text>
+            <text x="135" y="92" font-family="Helvetica, Arial, sans-serif" font-weight="300" font-size="12" letter-spacing="5" fill="#9fb3d4">SWITCHABLE GLASS · WHOLESALE</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">05 — The Monogram</div>
+          <div class="desc">A CS monogram in a rounded tile (this also doubles as your app icon, social avatar, and invoice header mark) plus the full wordmark and a wholesale tagline. Most "complete brand system" of the six.</div>
+          <div class="colors"><span><span class="swatch" style="background:#1B2845"></span>#1B2845</span> <span><span class="swatch" style="background:white"></span>#FFFFFF</span> <span><span class="swatch" style="background:#9fb3d4"></span>#9FB3D4</span></div>
+        </div>
+      </div>
+
+      <!-- =============== LOGO 06 — Bold Aussie =============== -->
+      <div class="card">
+        <div class="logo-block bg-6">
+          <svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Icon: simple bold circle (sun/lens) with horizon line through it -->
+            <g>
+              <circle cx="70" cy="70" r="36" stroke="white" stroke-width="4" fill="none"/>
+              <line x1="20" y1="70" x2="120" y2="70" stroke="white" stroke-width="4"/>
+              <!-- top half is opaque, bottom half clear; or vice versa — minimal -->
+              <path d="M 34 70 A 36 36 0 0 1 106 70 Z" fill="white"/>
+            </g>
+
+            <!-- Wordmark — chunky condensed -->
+            <text x="140" y="72" font-family="Impact, 'Arial Narrow', sans-serif" font-weight="900" font-size="44" letter-spacing="1" fill="white">CLEARSHIFT</text>
+            <text x="142" y="100" font-family="Helvetica, Arial, sans-serif" font-weight="600" font-size="11" letter-spacing="4" fill="white">SMART FILM · AUSTRALIA</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">06 — The Bold</div>
+          <div class="desc">Chunky condensed wordmark with a sun-horizon mark (top half opaque, bottom half clear — same switching idea). Confident, Australian, sits well on a truck wrap or hi-vis shirt. The "tradie's tradie" option.</div>
+          <div class="colors"><span><span class="swatch" style="background:#C9522F"></span>#C9522F</span> <span><span class="swatch" style="background:white"></span>#FFFFFF</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <strong>How to use these:</strong> view this file in a browser, then either right-click → "Save as" the page, or screenshot each tile. Once you pick one (or tell me which elements you like across multiple), I'll output a clean SVG of the final version + a black-on-white version, a white-on-black version, an app-icon square version, and a horizontal/stacked variant — the asset pack you'd actually use for invoices, the website, signage, and social.<br><br>
+      <strong>Quick check before committing:</strong> search the name on <em>search.ipaustralia.gov.au</em> (trademark), <em>connectonline.asic.gov.au</em> (business name), and check <em>clearshift.com.au</em> at any domain registrar. If any of those is taken, we revisit the name first — much cheaper than rebranding in year 2.
+    </footer>
+  </div>
+</body>
+</html>

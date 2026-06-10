@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CLEARSHIFT — Logo Concepts · Round 2</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #F5F2EC;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #1a1a1a;
+    padding: 48px 24px;
+  }
+  .page { max-width: 1200px; margin: 0 auto; }
+  header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #d4ccc0;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  header p {
+    color: #6b665e;
+    font-size: 14px;
+    max-width: 720px;
+    line-height: 1.55;
+  }
+  header p strong { color: #1a1a1a; font-weight: 600; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } }
+  .card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.05);
+  }
+  .logo-block {
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+  }
+  .meta { padding: 20px 24px; border-top: 1px solid #f0ece4; }
+  .meta .name {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .meta .desc { color: #6b665e; font-size: 12.5px; line-height: 1.55; }
+  .meta .colors {
+    margin-top: 12px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    font-family: ui-monospace, monospace;
+    font-size: 10.5px;
+    color: #8a8378;
+    align-items: center;
+  }
+  .swatch {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border-radius: 3px;
+    border: 1px solid rgba(0,0,0,0.08);
+    vertical-align: middle;
+    margin-right: 4px;
+  }
+
+  /* Block backgrounds — warm/luxurious palette */
+  .bg-A { background: #1F3A2E; }                                    /* deep forest */
+  .bg-B { background: #F4EDE0; }                                    /* warm cream */
+  .bg-C { background: #2D2A26; }                                    /* warm black/espresso */
+  .bg-D { background: #3F4B4A; }                                    /* dusty teal */
+  .bg-E { background: #5A2A2A; }                                    /* oxblood */
+  .bg-F { background: #1A2B3F; }                                    /* midnight navy */
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid #d4ccc0;
+    color: #6b665e;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+  footer strong { color: #1a1a1a; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>CLEARSHIFT — Round 2</h1>
+      <p>Based on your feedback. Kept: <strong>diagonal-split line icon</strong> (from Editorial), <strong>monogram tile + structured lockup</strong> (from Monogram), <strong>chunky confidence</strong> (from Bold) — without the serif font or the orange. Palette shifted to warm, inviting, restrained-luxe.</p>
+    </header>
+
+    <div class="grid">
+
+      <!-- =============== 07 — Forest Mark =============== -->
+      <div class="card">
+        <div class="logo-block bg-A">
+          <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Diagonal-split window icon (kept from Editorial) -->
+            <g>
+              <rect x="30" y="40" width="86" height="86" rx="2" stroke="#E8DCC4" stroke-width="2.5" fill="none"/>
+              <!-- frosted half (hatched lines) -->
+              <defs>
+                <pattern id="hatchA" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="6" stroke="#E8DCC4" stroke-width="1.1"/>
+                </pattern>
+                <clipPath id="clipA">
+                  <polygon points="30,40 116,40 30,126"/>
+                </clipPath>
+              </defs>
+              <rect x="30" y="40" width="86" height="86" fill="url(#hatchA)" clip-path="url(#clipA)"/>
+              <!-- diagonal -->
+              <line x1="116" y1="40" x2="30" y2="126" stroke="#E8DCC4" stroke-width="2.5"/>
+            </g>
+
+            <!-- Wordmark — clean sans -->
+            <text x="148" y="88" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="34" letter-spacing="2" fill="#F4EDE0">CLEARSHIFT</text>
+            <text x="148" y="114" font-family="Helvetica, Arial, sans-serif" font-weight="400" font-size="11" letter-spacing="6" fill="#A8B5A8">SWITCHABLE FILM · AUSTRALIA</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">07 — Forest</div>
+          <div class="desc">The Editorial icon you liked, paired with a clean sans-serif (no more serif). Deep forest green + warm cream — natural, considered, calmly premium. Reads "home" and "considered design" rather than "tech product".</div>
+          <div class="colors">
+            <span><span class="swatch" style="background:#1F3A2E"></span>#1F3A2E</span>
+            <span><span class="swatch" style="background:#F4EDE0"></span>#F4EDE0</span>
+            <span><span class="swatch" style="background:#A8B5A8"></span>#A8B5A8</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== 08 — Cream + Espresso =============== -->
+      <div class="card">
+        <div class="logo-block bg-B">
+          <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Monogram tile + diagonal-split window icon INSIDE it -->
+            <rect x="30" y="36" width="94" height="94" rx="16" fill="#2D2A26"/>
+            <!-- inside: diagonal split (smaller) -->
+            <g>
+              <defs>
+                <pattern id="hatchB" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="5" stroke="#F4EDE0" stroke-width="0.9"/>
+                </pattern>
+                <clipPath id="clipB">
+                  <polygon points="50,56 104,56 50,110"/>
+                </clipPath>
+              </defs>
+              <rect x="50" y="56" width="54" height="54" stroke="#F4EDE0" stroke-width="1.8" fill="none"/>
+              <rect x="50" y="56" width="54" height="54" fill="url(#hatchB)" clip-path="url(#clipB)"/>
+              <line x1="104" y1="56" x2="50" y2="110" stroke="#F4EDE0" stroke-width="1.8"/>
+            </g>
+
+            <!-- Wordmark + tagline (structured like Monogram) -->
+            <text x="150" y="86" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="32" letter-spacing="1.5" fill="#2D2A26">CLEARSHIFT</text>
+            <text x="152" y="110" font-family="Helvetica, Arial, sans-serif" font-weight="400" font-size="10.5" letter-spacing="5" fill="#8a7d6b">SMART FILM CO. · AUSTRALIA</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">08 — Cream &amp; Espresso</div>
+          <div class="desc">The Monogram lockup you liked — but the tile now holds the diagonal-split window icon (not just "CS"), so the mark actually <em>says something</em>. Cream + espresso = warm, refined, the colour palette of a nice café. Inviting, premium, family-friendly. <strong>My personal favourite of this round.</strong></div>
+          <div class="colors">
+            <span><span class="swatch" style="background:#F4EDE0"></span>#F4EDE0</span>
+            <span><span class="swatch" style="background:#2D2A26"></span>#2D2A26</span>
+            <span><span class="swatch" style="background:#8a7d6b"></span>#8A7D6B</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== 09 — Espresso Mono =============== -->
+      <div class="card">
+        <div class="logo-block bg-C">
+          <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Tile with diagonal-split mark, light variant -->
+            <rect x="30" y="36" width="94" height="94" rx="16" fill="#F4EDE0"/>
+            <g>
+              <defs>
+                <pattern id="hatchC" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="5" stroke="#2D2A26" stroke-width="0.9"/>
+                </pattern>
+                <clipPath id="clipC">
+                  <polygon points="50,56 104,56 50,110"/>
+                </clipPath>
+              </defs>
+              <rect x="50" y="56" width="54" height="54" stroke="#2D2A26" stroke-width="1.8" fill="none"/>
+              <rect x="50" y="56" width="54" height="54" fill="url(#hatchC)" clip-path="url(#clipC)"/>
+              <line x1="104" y1="56" x2="50" y2="110" stroke="#2D2A26" stroke-width="1.8"/>
+            </g>
+
+            <text x="150" y="86" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="32" letter-spacing="1.5" fill="#F4EDE0">CLEARSHIFT</text>
+            <text x="152" y="110" font-family="Helvetica, Arial, sans-serif" font-weight="400" font-size="10.5" letter-spacing="5" fill="#B8AC97">SMART FILM CO. · AUSTRALIA</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">09 — Espresso (inverted)</div>
+          <div class="desc">Same composition as #08 with the palette flipped — espresso background, cream mark. Different mood: more confident, more "evening", a touch more luxurious. Works beautifully on signage and dark-mode websites.</div>
+          <div class="colors">
+            <span><span class="swatch" style="background:#2D2A26"></span>#2D2A26</span>
+            <span><span class="swatch" style="background:#F4EDE0"></span>#F4EDE0</span>
+            <span><span class="swatch" style="background:#B8AC97"></span>#B8AC97</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== 10 — Dusty Teal + Brass =============== -->
+      <div class="card">
+        <div class="logo-block bg-D">
+          <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Bigger, bolder diagonal mark (no tile) — picks up "Bold" energy without the orange -->
+            <g>
+              <rect x="28" y="36" width="94" height="94" rx="3" stroke="#D4B374" stroke-width="3" fill="none"/>
+              <defs>
+                <pattern id="hatchD" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="6" stroke="#D4B374" stroke-width="1.2"/>
+                </pattern>
+                <clipPath id="clipD">
+                  <polygon points="28,36 122,36 28,130"/>
+                </clipPath>
+              </defs>
+              <rect x="28" y="36" width="94" height="94" fill="url(#hatchD)" clip-path="url(#clipD)"/>
+              <line x1="122" y1="36" x2="28" y2="130" stroke="#D4B374" stroke-width="3"/>
+            </g>
+
+            <!-- Confident chunky wordmark (Bold energy, sans-serif) -->
+            <text x="152" y="92" font-family="Helvetica, Arial, sans-serif" font-weight="900" font-size="40" letter-spacing="0.5" fill="#F4EDE0">CLEARSHIFT</text>
+            <text x="154" y="116" font-family="Helvetica, Arial, sans-serif" font-weight="400" font-size="10.5" letter-spacing="5" fill="#D4B374">SMART FILM · TRADE SUPPLY</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">10 — Dusty Teal &amp; Brass</div>
+          <div class="desc">The "Bold" composition with no orange anywhere. Dusty teal background + brushed-brass accent feels expensive but human — think a renovated 1920s shopfront, not a tech startup. Confident, warm, distinctive.</div>
+          <div class="colors">
+            <span><span class="swatch" style="background:#3F4B4A"></span>#3F4B4A</span>
+            <span><span class="swatch" style="background:#D4B374"></span>#D4B374</span>
+            <span><span class="swatch" style="background:#F4EDE0"></span>#F4EDE0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== 11 — Oxblood / Heritage =============== -->
+      <div class="card">
+        <div class="logo-block bg-E">
+          <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Tile + diagonal mark -->
+            <rect x="30" y="36" width="94" height="94" rx="16" fill="#F4EDE0"/>
+            <g>
+              <defs>
+                <pattern id="hatchE" patternUnits="userSpaceOnUse" width="5" height="5" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="5" stroke="#5A2A2A" stroke-width="0.9"/>
+                </pattern>
+                <clipPath id="clipE">
+                  <polygon points="50,56 104,56 50,110"/>
+                </clipPath>
+              </defs>
+              <rect x="50" y="56" width="54" height="54" stroke="#5A2A2A" stroke-width="1.8" fill="none"/>
+              <rect x="50" y="56" width="54" height="54" fill="url(#hatchE)" clip-path="url(#clipE)"/>
+              <line x1="104" y1="56" x2="50" y2="110" stroke="#5A2A2A" stroke-width="1.8"/>
+            </g>
+
+            <text x="150" y="86" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="32" letter-spacing="1.5" fill="#F4EDE0">CLEARSHIFT</text>
+            <text x="152" y="110" font-family="Helvetica, Arial, sans-serif" font-weight="400" font-size="10.5" letter-spacing="5" fill="#E8C5BA">SMART FILM CO. · AUSTRALIA</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">11 — Oxblood / Heritage</div>
+          <div class="desc">If you want the warmth of the orange but more grown-up and luxurious — oxblood (deep wine-red) is the move. Heritage feel, family-friendly, premium without being cold. Same monogram lockup, very different mood.</div>
+          <div class="colors">
+            <span><span class="swatch" style="background:#5A2A2A"></span>#5A2A2A</span>
+            <span><span class="swatch" style="background:#F4EDE0"></span>#F4EDE0</span>
+            <span><span class="swatch" style="background:#E8C5BA"></span>#E8C5BA</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- =============== 12 — Midnight + Sand =============== -->
+      <div class="card">
+        <div class="logo-block bg-F">
+          <svg viewBox="0 0 520 160" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Bigger diagonal window mark with refined cream + sand accent -->
+            <g>
+              <rect x="30" y="40" width="86" height="86" rx="2" stroke="#E8DCC4" stroke-width="2.5" fill="none"/>
+              <defs>
+                <pattern id="hatchF" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+                  <line x1="0" y1="0" x2="0" y2="6" stroke="#D4B988" stroke-width="1.1"/>
+                </pattern>
+                <clipPath id="clipF">
+                  <polygon points="30,40 116,40 30,126"/>
+                </clipPath>
+              </defs>
+              <rect x="30" y="40" width="86" height="86" fill="url(#hatchF)" clip-path="url(#clipF)"/>
+              <line x1="116" y1="40" x2="30" y2="126" stroke="#E8DCC4" stroke-width="2.5"/>
+            </g>
+
+            <!-- Stacked, slightly more elegant spacing -->
+            <text x="148" y="78" font-family="Helvetica, Arial, sans-serif" font-weight="300" font-size="36" letter-spacing="3" fill="#F4EDE0">CLEAR</text>
+            <text x="148" y="114" font-family="Helvetica, Arial, sans-serif" font-weight="700" font-size="36" letter-spacing="3" fill="#D4B988">SHIFT</text>
+          </svg>
+        </div>
+        <div class="meta">
+          <div class="name">12 — Midnight &amp; Sand</div>
+          <div class="desc">Light/heavy weight contrast on the wordmark (CLEAR thin, SHIFT bold) gives the "shift" idea typographically — the name itself enacts the transition. Midnight navy + warm sand = grown-up, calm, distinctive. Quietly luxurious.</div>
+          <div class="colors">
+            <span><span class="swatch" style="background:#1A2B3F"></span>#1A2B3F</span>
+            <span><span class="swatch" style="background:#D4B988"></span>#D4B988</span>
+            <span><span class="swatch" style="background:#F4EDE0"></span>#F4EDE0</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <footer>
+      <strong>The three palette families in plain English:</strong><br>
+      &nbsp;&nbsp;• Forest green + cream (#07) — natural, calm, "home renovation feel"<br>
+      &nbsp;&nbsp;• Cream + espresso (#08, #09) — warm café-grade premium, very family-friendly<br>
+      &nbsp;&nbsp;• Oxblood, dusty teal &amp; brass, or midnight + sand (#10, #11, #12) — distinctive, more luxurious, slightly more grown-up<br><br>
+      <strong>If I had to pick one for your brief:</strong> #08 (Cream &amp; Espresso). It's the most inviting and family-friendly of the set, but the espresso keeps it premium. The tile-with-icon mark gives you a perfect app icon / social avatar / invoice mark, and the cream background photographs beautifully against real product (smart film, install shots, samples). It also <em>feels</em> Australian without leaning on cliché.<br><br>
+      Tell me which one (or which mix — e.g. "the layout of #08 but the colours of #11") and I'll do a final polish + give you the full asset pack (clean SVG, white-on-dark, dark-on-light, square app icon, horizontal/stacked).
+    </footer>
+  </div>
+</body>
+</html>

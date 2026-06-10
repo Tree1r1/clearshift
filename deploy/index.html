@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>/* device routing */if(/Android|iPhone|iPad|iPod|Mobi/i.test(navigator.userAgent)&&Math.min(screen.width,window.innerWidth)<820){location.replace('mobile.html'+location.hash);}</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clearshift — wholesale switchable PDLC smart film for Australian trades. Cut to spec, RCM-compliant, dispatched direct to site. Glaziers, tinters, shopfitters, builders.">
+  <meta name="keywords" content="smart film Australia, PDLC film trade supply, switchable privacy glass Australia, smart glass wholesale, smart window film Perth, glazier supply Australia">
+  <title>Clearshift — Switchable Smart Film. Trade Supply. Australia.</title>
+  <meta property="og:title" content="Clearshift — Switchable Smart Film. Trade Supply. Australia.">
+  <meta property="og:description" content="Wholesale PDLC smart film cut to spec, RCM-compliant, dispatched direct to site. Plus: earn $250 for every successful trade referral.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_AU">
+  <!-- Favicon: Clearshift diagonal-split logo mark -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1A2A'/%3E%3Cdefs%3E%3Cpattern id='h' patternUnits='userSpaceOnUse' width='2.8' height='2.8' patternTransform='rotate(45)'%3E%3Cline x1='0' y1='0' x2='0' y2='2.8' stroke='%23D4B988' stroke-width='0.7'/%3E%3C/pattern%3E%3CclipPath id='c'%3E%3Cpolygon points='5,5 27,5 5,27'/%3E%3C/clipPath%3E%3C/defs%3E%3Crect x='5' y='5' width='22' height='22' stroke='%23D4B988' stroke-width='1.5' fill='none'/%3E%3Crect x='5' y='5' width='22' height='22' fill='url(%23h)' clip-path='url(%23c)'/%3E%3Cline x1='27' y1='5' x2='5' y2='27' stroke='%23D4B988' stroke-width='1.5'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230E1A2A'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --midnight:  #0E1A2A;
+      --mid2:      #1A2B3F;
+      --mid3:      #2A3A52;
+      --sand:      #D4B988;
+      --sand-deep: #B89A6A;
+      --sand-soft: #E8D9B8;
+      --white:     #FFFFFF;
+      --off:       #FAFAF8;
+      --line:      #E8E7E3;
+      --ink:       #1A2B3F;
+      --ink-dim:   #5A6677;
+      --ink-mute:  #8A95A5;
+      --r:         4px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Manrope', -apple-system, sans-serif;
+      font-weight: 300;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      letter-spacing: -0.005em;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+
+    /* ── UTILS ── */
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 36px; }
+    @media (max-width: 720px) { .wrap { padding: 0 20px; } }
+    .tag-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--sand-deep);
+      display: flex; align-items: center; gap: 12px; margin-bottom: 20px;
+    }
+    .tag-label::before { content: ''; width: 28px; height: 1px; background: var(--sand-deep); }
+    .tag-label.light { color: var(--sand); }
+    .tag-label.light::before { background: var(--sand); }
+    .section-title {
+      font-size: clamp(30px, 4vw, 52px); font-weight: 200;
+      letter-spacing: -0.03em; line-height: 1.1; color: var(--midnight); margin-bottom: 18px;
+    }
+    .section-title b { font-weight: 700; }
+    .section-title em { font-style: italic; font-weight: 400; color: var(--sand-deep); }
+    .section-sub { font-size: 17px; color: var(--ink-dim); line-height: 1.65; max-width: 580px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 15px 28px; background: var(--midnight); color: var(--white);
+      font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; text-decoration: none; border: none;
+      border-radius: 100px; cursor: pointer; transition: all .2s ease; font-family: inherit;
+    }
+    .btn:hover { background: var(--mid3); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(14,26,42,0.2); }
+    .btn.sand { background: var(--sand); color: var(--midnight); }
+    .btn.sand:hover { background: var(--sand-deep); color: var(--white); box-shadow: 0 8px 24px rgba(180,154,106,0.3); }
+    .btn.ghost { background: transparent; color: var(--white); border: 1.5px solid rgba(255,255,255,0.45); }
+    .btn.ghost:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.7); }
+    .btn::after { content: '→'; font-weight: 400; }
+
+    /* ── ANNOUNCEMENT ── */
+    .announce {
+      background: var(--midnight); color: rgba(255,255,255,0.8);
+      text-align: center; padding: 12px 52px;
+      font-size: 12.5px; letter-spacing: 0.04em; position: relative;
+    }
+    .announce strong { color: var(--sand); font-weight: 700; }
+    .announce-dismiss {
+      position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+      background: none; border: none; color: rgba(255,255,255,0.4); cursor: pointer; font-size: 20px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky; top: 0; z-index: 90;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: saturate(180%) blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-row { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+    .logo { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; flex-shrink: 0; }
+    .logo svg { width: 34px; height: 34px; }
+    .logo-word { font-size: 15px; font-weight: 300; letter-spacing: 0.2em; text-transform: uppercase; color: var(--midnight); }
+    .logo-word b { font-weight: 800; color: var(--sand-deep); }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-size: 13px; font-weight: 500; text-decoration: none; color: var(--ink-dim); transition: color .2s; }
+    .nav-links a:hover { color: var(--midnight); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 24px; height: 1.5px; background: var(--midnight); }
+    @media (max-width: 900px) { .nav-links, .nav-cta { display: none; } .hamburger { display: flex; } }
+
+    /* ── MOBILE MENU ── */
+    .mob-menu { display: none; position: fixed; inset: 0; z-index: 200; background: var(--midnight); flex-direction: column; padding: 90px 36px 48px; }
+    .mob-menu.open { display: flex; }
+    .mob-close { position: absolute; top: 24px; right: 28px; background: none; border: none; color: rgba(255,255,255,0.6); font-size: 28px; cursor: pointer; }
+    .mob-menu a { font-size: clamp(28px, 7vw, 50px); font-weight: 200; color: var(--white); text-decoration: none; letter-spacing: -0.02em; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.08); transition: color .2s, padding-left .2s; }
+    .mob-menu a:hover { color: var(--sand); padding-left: 8px; }
+    .mob-foot { margin-top: auto; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+
+    /* ── HERO BA SLIDER ── */
+    .hero { position: relative; overflow: hidden; height: calc(100vh - 40px); min-height: 560px; max-height: 960px; }
+    @media (max-width: 720px) { .hero { height: 85vw; min-height: 380px; max-height: 640px; } }
+    .ba-hero { position: relative; width: 100%; height: 100%; cursor: col-resize; user-select: none; overflow: hidden; }
+    .ba-before, .ba-after { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    /* After layer clips: inset(0 right 0 0) = show left portion. At 50% shows left half. Drag right → pct grows → right clip shrinks → more of after visible from left. */
+    .ba-after { clip-path: inset(0 50% 0 0); }
+    .ba-line { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,0.9); transform: translateX(-50%); z-index: 10; pointer-events: none; }
+    .ba-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 52px; height: 52px; background: var(--white); border-radius: 50%; box-shadow: 0 4px 24px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; z-index: 11; pointer-events: none; }
+    .ba-handle svg { width: 20px; height: 20px; color: var(--midnight); }
+    .ba-labels { position: absolute; bottom: 200px; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 28px; z-index: 12; pointer-events: none; }
+    @media (max-width: 720px) { .ba-labels { bottom: 120px; } }
+    .ba-lbl { background: rgba(14,26,42,0.75); backdrop-filter: blur(6px); color: var(--white); padding: 8px 18px; border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; }
+    .hero-copy { position: absolute; bottom: 0; left: 0; right: 0; z-index: 20; padding: 80px 48px 48px; background: linear-gradient(to top, rgba(14,26,42,0.88) 0%, rgba(14,26,42,0.5) 55%, transparent 100%); pointer-events: none; }
+    @media (max-width: 720px) { .hero-copy { padding: 48px 20px 32px; } }
+    .hero-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sand); margin-bottom: 14px; }
+    .hero-copy h1 { font-size: clamp(34px, 5.5vw, 76px); font-weight: 200; letter-spacing: -0.03em; line-height: 1.05; color: var(--white); margin-bottom: 18px; max-width: 720px; }
+    .hero-copy h1 b { font-weight: 700; }
+    .hero-copy h1 em { font-style: italic; font-weight: 400; color: var(--sand); }
+    .hero-copy p { font-size: 18px; color: rgba(255,255,255,0.75); max-width: 540px; line-height: 1.6; margin-bottom: 30px; }
+    @media (max-width: 720px) { .hero-copy p { display: none; } }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; pointer-events: auto; }
+
+    /* ── BA GALLERY (right below hero) ── */
+    .ba-gallery { padding: 80px 0; background: var(--white); }
+    @media (max-width: 720px) { .ba-gallery { padding: 56px 0; } }
+    .ba-gallery-header { text-align: center; margin-bottom: 56px; }
+    .ba-gallery-header .section-title { margin-bottom: 12px; }
+    .ba-gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    @media (max-width: 800px) { .ba-gallery-grid { grid-template-columns: 1fr; } }
+    .ba-card-slider { position: relative; width: 100%; aspect-ratio: 4/3; overflow: hidden; cursor: col-resize; user-select: none; border-radius: var(--r); }
+    .ba-card-before, .ba-card-after { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    .ba-card-after { clip-path: inset(0 50% 0 0); }
+    .ba-card-line { position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: rgba(255,255,255,0.9); transform: translateX(-50%); z-index: 10; pointer-events: none; }
+    .ba-card-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; background: var(--white); border-radius: 50%; box-shadow: 0 3px 16px rgba(0,0,0,0.25); display: flex; align-items: center; justify-content: center; z-index: 11; pointer-events: none; }
+    .ba-card-handle svg { width: 18px; height: 18px; color: var(--midnight); }
+    .ba-card-labels { position: absolute; bottom: 16px; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 16px; z-index: 12; pointer-events: none; }
+    .ba-card-lbl { background: rgba(14,26,42,0.72); color: var(--white); padding: 6px 14px; border-radius: 100px; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+    .ba-card-info { padding: 20px 0 0; }
+    .ba-card-info h3 { font-size: 18px; font-weight: 700; color: var(--midnight); margin-bottom: 6px; letter-spacing: -0.01em; }
+    .ba-card-info p { font-size: 14px; color: var(--ink-dim); line-height: 1.65; }
+
+    /* ── FULL-WIDTH IMAGE BANNER ── */
+    .img-banner { width: 100%; height: 520px; object-fit: cover; object-position: center; display: block; }
+    @media (max-width: 720px) { .img-banner { height: 320px; } }
+    .img-banner-caption { background: var(--midnight); padding: 20px 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .img-banner-caption p { font-size: 14px; color: rgba(255,255,255,0.6); letter-spacing: 0.03em; }
+    .img-banner-caption .caption-stat { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--sand); }
+
+    /* ── ABOUT ── */
+    .about { padding: 120px 0; background: var(--off); }
+    @media (max-width: 720px) { .about { padding: 72px 0; } }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    @media (max-width: 880px) { .about-grid { grid-template-columns: 1fr; gap: 48px; } }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap img { width: 100%; height: 540px; object-fit: cover; border-radius: var(--r); }
+    @media (max-width: 720px) { .about-img-wrap img { height: 300px; } }
+    .about-badge { position: absolute; bottom: -24px; right: -20px; background: var(--midnight); color: var(--white); padding: 22px 26px; border-radius: var(--r); box-shadow: 0 16px 40px rgba(14,26,42,0.28); text-align: center; }
+    @media (max-width: 720px) { .about-badge { bottom: -16px; right: -8px; padding: 16px 18px; } }
+    .badge-num { font-size: 34px; font-weight: 700; color: var(--sand); line-height: 1; }
+    .badge-lbl { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.55; margin-top: 4px; }
+    .about-list { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+    .about-list li { display: flex; align-items: flex-start; gap: 14px; font-size: 15px; color: var(--ink); }
+    .tick { width: 22px; height: 22px; background: rgba(180,154,106,0.14); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .tick svg { width: 12px; height: 12px; color: var(--sand-deep); }
+
+    /* ── PRODUCTS ── */
+    .products { padding: 120px 0; background: var(--white); }
+    @media (max-width: 720px) { .products { padding: 72px 0; } }
+    .products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    @media (max-width: 880px) { .products-grid { grid-template-columns: 1fr; } }
+    .product-card { background: var(--white); border-radius: var(--r); overflow: hidden; border: 1px solid var(--line); transition: transform .3s, box-shadow .3s; }
+    .product-card:hover { transform: translateY(-6px); box-shadow: 0 24px 60px rgba(14,26,42,0.1); }
+    .product-card-img { width: 100%; height: 260px; object-fit: cover; display: block; transition: transform .5s ease; }
+    .product-card:hover .product-card-img { transform: scale(1.03); }
+    .product-card-img-wrap { overflow: hidden; }
+    .product-card-body { padding: 28px; }
+    .product-type { font-size: 10.5px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--sand-deep); margin-bottom: 10px; }
+    .product-card h3 { font-size: 21px; font-weight: 700; color: var(--midnight); margin-bottom: 12px; letter-spacing: -0.01em; }
+    .product-card p { font-size: 14px; color: var(--ink-dim); line-height: 1.65; margin-bottom: 22px; }
+    .product-link { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: var(--mid2); text-decoration: none; border-bottom: 1px solid var(--sand-deep); padding-bottom: 2px; transition: gap .2s, color .2s; }
+    .product-link:hover { gap: 10px; color: var(--sand-deep); }
+
+    /* ── APPLICATIONS ── */
+    .applications { padding: 120px 0; background: var(--off); }
+    @media (max-width: 720px) { .applications { padding: 72px 0; } }
+    .apps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    @media (max-width: 900px) { .apps-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .apps-grid { grid-template-columns: 1fr; } }
+    .app-card { background: var(--white); border: 1px solid var(--line); border-radius: var(--r); padding: 30px 26px; transition: all .25s; }
+    .app-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(14,26,42,0.08); border-color: var(--sand); }
+    .app-icon { width: 46px; height: 46px; background: rgba(180,154,106,0.1); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+    .app-icon svg { width: 22px; height: 22px; color: var(--sand-deep); }
+    .app-card h3 { font-size: 17px; font-weight: 700; color: var(--midnight); margin-bottom: 10px; }
+    .app-card p { font-size: 14px; color: var(--ink-dim); line-height: 1.65; }
+
+    /* ── FULL-WIDTH DARK PHOTO SECTION ── */
+    .photo-break { position: relative; height: 500px; overflow: hidden; }
+    @media (max-width: 720px) { .photo-break { height: 320px; } }
+    .photo-break img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    .photo-break-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(14,26,42,0.75) 0%, rgba(14,26,42,0.3) 100%); display: flex; align-items: center; padding: 0 64px; }
+    @media (max-width: 720px) { .photo-break-overlay { padding: 0 24px; } }
+    .photo-break-text h2 { font-size: clamp(28px, 4.5vw, 56px); font-weight: 200; letter-spacing: -0.03em; color: var(--white); line-height: 1.1; margin-bottom: 16px; max-width: 640px; }
+    .photo-break-text h2 em { font-style: italic; color: var(--sand); font-weight: 400; }
+    .photo-break-text p { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 480px; margin-bottom: 28px; }
+
+    /* ── PRICING ── */
+    .pricing { padding: 120px 0; background: var(--white); }
+    @media (max-width: 720px) { .pricing { padding: 72px 0; } }
+    .pricing-intro { max-width: 680px; margin-bottom: 64px; }
+    .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; }
+    @media (max-width: 840px) { .tiers-grid { grid-template-columns: 1fr; gap: 0; } }
+    .tier { padding: 44px 36px; border-right: 1px solid var(--line); background: var(--white); position: relative; transition: background .2s; }
+    .tier:last-child { border-right: none; }
+    @media (max-width: 840px) { .tier { border-right: none; border-bottom: 1px solid var(--line); } .tier:last-child { border-bottom: none; } }
+    .tier.featured { background: var(--midnight); border-color: var(--midnight); }
+    .tier-name { font-size: 10.5px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-mute); margin-bottom: 8px; }
+    .tier.featured .tier-name { color: var(--sand); }
+    .tier-headline { font-size: 26px; font-weight: 300; color: var(--midnight); margin-bottom: 8px; letter-spacing: -0.02em; }
+    .tier.featured .tier-headline { color: var(--white); }
+    .tier-qualify { font-size: 12.5px; color: var(--ink-mute); margin-bottom: 32px; line-height: 1.5; padding-bottom: 28px; border-bottom: 1px solid var(--line); }
+    .tier.featured .tier-qualify { color: rgba(255,255,255,0.5); border-color: rgba(255,255,255,0.1); }
+    .tier-rows { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .tier-row { display: flex; justify-content: space-between; align-items: baseline; padding: 13px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+    .tier.featured .tier-row { border-color: rgba(255,255,255,0.08); }
+    .tier-row:last-child { border-bottom: none; }
+    .tier-row .item-name { color: var(--ink-dim); }
+    .tier.featured .tier-row .item-name { color: rgba(255,255,255,0.6); }
+    .tier-row .item-price { font-weight: 700; color: var(--midnight); font-size: 14px; }
+    .tier.featured .tier-row .item-price { color: var(--white); }
+    .tier-terms { font-size: 12px; color: var(--ink-mute); margin-top: 22px; line-height: 1.55; }
+    .tier.featured .tier-terms { color: var(--sand); }
+    .tier-badge { position: absolute; top: -1px; right: 28px; background: var(--sand); color: var(--midnight); font-size: 9.5px; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; border-radius: 0 0 6px 6px; }
+    .pricing-note { margin-top: 28px; padding: 20px 28px; background: var(--off); border-radius: var(--r); font-size: 13px; color: var(--ink-dim); line-height: 1.65; border-left: 3px solid var(--sand); }
+    .pricing-note strong { color: var(--midnight); }
+
+    /* ── VIDEOS ── */
+    .videos { padding: 120px 0; background: var(--midnight); }
+    @media (max-width: 720px) { .videos { padding: 72px 0; } }
+    .videos .section-title { color: var(--white); }
+    .videos .section-sub { color: rgba(255,255,255,0.6); }
+    .videos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 60px; }
+    @media (max-width: 900px) { .videos-grid { grid-template-columns: 1fr; } }
+    .video-embed { width: 100%; aspect-ratio: 16/9; border-radius: var(--r); overflow: hidden; background: var(--mid3); }
+    .video-embed iframe { width: 100%; height: 100%; border: none; display: block; }
+    .video-card h3 { font-size: 16px; font-weight: 700; color: var(--white); margin-top: 18px; margin-bottom: 6px; }
+    .video-card p { font-size: 13.5px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+
+    /* ── PROCESS ── */
+    .process { padding: 120px 0; background: var(--off); }
+    @media (max-width: 720px) { .process { padding: 72px 0; } }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 64px; }
+    @media (max-width: 900px) { .process-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .process-grid { grid-template-columns: 1fr; } }
+    .process-step { padding: 40px 36px; background: var(--white); border: 1px solid var(--line); margin: -1px 0 0 -1px; position: relative; transition: z-index 0s, box-shadow .25s; }
+    .process-step:hover { z-index: 1; box-shadow: 0 8px 40px rgba(14,26,42,0.1); border-color: var(--sand); }
+    .step-num { font-size: 72px; font-weight: 800; color: rgba(14,26,42,0.05); line-height: 1; letter-spacing: -0.04em; margin-bottom: 16px; font-variant-numeric: tabular-nums; }
+    .step-icon { width: 48px; height: 48px; background: var(--midnight); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+    .step-icon svg { width: 24px; height: 24px; color: var(--sand); }
+    .process-step h3 { font-size: 18px; font-weight: 700; color: var(--midnight); margin-bottom: 12px; letter-spacing: -0.01em; }
+    .process-step p { font-size: 14px; color: var(--ink-dim); line-height: 1.7; }
+    .step-connector { display: none; }
+    @media (min-width: 901px) {
+      .process-step:not(:last-child)::after {
+        content: ''; position: absolute; top: 80px; right: -1px;
+        width: 2px; height: 40px; background: var(--sand); opacity: 0.4;
+      }
+    }
+
+    /* ── FAQ ── */
+    .faq { padding: 120px 0; background: var(--white); }
+    @media (max-width: 720px) { .faq { padding: 72px 0; } }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 100px; align-items: start; }
+    @media (max-width: 880px) { .faq-grid { grid-template-columns: 1fr; gap: 48px; } }
+    .faq-list { border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-btn { width: 100%; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; text-align: left; font-family: inherit; font-size: 15px; font-weight: 600; color: var(--midnight); letter-spacing: -0.01em; }
+    .faq-plus { flex-shrink: 0; width: 28px; height: 28px; border: 1.5px solid var(--line); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--ink-mute); font-size: 18px; transition: transform .3s, border-color .3s, color .3s; }
+    .faq-item.open .faq-plus { transform: rotate(45deg); border-color: var(--sand-deep); color: var(--sand-deep); }
+    .faq-body { overflow: hidden; max-height: 0; transition: max-height .38s ease; }
+    .faq-body-inner { padding: 0 0 24px; font-size: 14.5px; color: var(--ink-dim); line-height: 1.75; max-width: 620px; }
+    .faq-item.open .faq-body { max-height: 400px; }
+
+    /* ── QUOTE FORM ── */
+    .quote { padding: 120px 0; background: var(--midnight); position: relative; overflow: hidden; }
+    @media (max-width: 720px) { .quote { padding: 72px 0; } }
+    .quote::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(45deg, transparent 0, transparent 38px, rgba(212,185,136,0.04) 38px, rgba(212,185,136,0.04) 39px); pointer-events: none; }
+    .quote-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; align-items: start; position: relative; z-index: 1; }
+    @media (max-width: 900px) { .quote-grid { grid-template-columns: 1fr; gap: 56px; } }
+    .quote-info .section-title { color: var(--white); }
+    .quote-info .section-sub { color: rgba(255,255,255,0.6); }
+    .quote-perks { list-style: none; margin-top: 32px; display: flex; flex-direction: column; gap: 14px; }
+    .quote-perks li { display: flex; align-items: center; gap: 12px; font-size: 15px; color: rgba(255,255,255,0.8); }
+    .quote-perks li::before { content: ''; width: 6px; height: 6px; background: var(--sand); border-radius: 50%; flex-shrink: 0; }
+    .quote-contact { margin-top: 40px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; gap: 16px; }
+    .c-row { display: flex; flex-direction: column; gap: 3px; }
+    .c-lbl { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .c-val { font-size: 15px; font-weight: 500; color: var(--white); }
+    .c-val a { text-decoration: none; color: inherit; transition: color .2s; }
+    .c-val a:hover { color: var(--sand); }
+    .form-wrap { background: var(--white); border-radius: var(--r); padding: 44px; }
+    @media (max-width: 720px) { .form-wrap { padding: 28px 20px; } }
+    .form-wrap h3 { font-size: 22px; font-weight: 700; color: var(--midnight); margin-bottom: 28px; letter-spacing: -0.01em; }
+    .form-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 560px) { .form-2col { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 5px; margin-bottom: 14px; }
+    .form-group label { font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-dim); }
+    .form-group input, .form-group select, .form-group textarea { padding: 13px 16px; border: 1.5px solid var(--line); border-radius: var(--r); font-family: inherit; font-size: 14px; color: var(--ink); background: var(--white); outline: none; transition: border-color .2s; -webkit-appearance: none; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--ink-mute); }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--sand-deep); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-submit { width: 100%; padding: 17px; background: var(--midnight); color: var(--white); border: none; border-radius: 100px; font-family: inherit; font-size: 13.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; cursor: pointer; transition: all .2s; margin-top: 8px; }
+    .form-submit:hover { background: var(--mid3); }
+    .form-note { font-size: 11.5px; color: var(--ink-mute); text-align: center; margin-top: 12px; line-height: 1.5; }
+    .form-success { display: none; text-align: center; padding: 32px 20px; }
+    .form-success svg { width: 48px; height: 48px; color: #22c55e; margin: 0 auto 16px; }
+    .form-success h3 { font-size: 20px; font-weight: 700; color: var(--midnight); margin-bottom: 8px; }
+    .form-success p { font-size: 14px; color: var(--ink-dim); line-height: 1.65; }
+
+    /* ── COMPLIANCE ── */
+    .compliance-bar { background: var(--mid2); padding: 18px 36px; font-size: 11.5px; color: rgba(255,255,255,0.35); text-align: center; line-height: 1.7; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--midnight); padding: 72px 0 36px; }
+    .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 56px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+    @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } }
+    @media (max-width: 540px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand-mark { display: flex; align-items: center; gap: 11px; margin-bottom: 20px; text-decoration: none; }
+    .footer-brand-mark svg { width: 32px; height: 32px; }
+    .footer-brand-mark .logo-word { color: rgba(255,255,255,0.8); font-size: 14px; }
+    .footer-brand-mark .logo-word b { color: var(--sand); }
+    .footer-brand p { font-size: 13.5px; color: rgba(255,255,255,0.4); line-height: 1.7; max-width: 240px; }
+    footer h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--sand); margin-bottom: 20px; }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    footer ul a { font-size: 13.5px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color .2s; }
+    footer ul a:hover { color: var(--white); }
+    footer ul span { font-size: 13.5px; color: rgba(255,255,255,0.28); }
+    .footer-bottom { padding-top: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 12px; color: rgba(255,255,255,0.22); letter-spacing: 0.04em; }
+    .footer-bottom a { color: rgba(255,255,255,0.32); text-decoration: none; transition: color .2s; }
+    .footer-bottom a:hover { color: rgba(255,255,255,0.65); }
+
+    /* ── APP CARDS WITH IMAGES ── */
+    .app-card { padding: 0; overflow: hidden; }
+    .app-card-img-wrap { height: 190px; overflow: hidden; position: relative; }
+    .app-card-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+    .app-card:hover .app-card-img { transform: scale(1.05); }
+    .app-card-body { padding: 26px; }
+    .app-card .app-icon { position: absolute; bottom: 16px; right: 16px; background: var(--midnight); margin-bottom: 0; box-shadow: 0 8px 20px rgba(14,26,42,0.3); z-index: 2; }
+    .app-card .app-icon svg { color: var(--sand); }
+    .app-card-img-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(14,26,42,0.25), transparent 50%); pointer-events: none; }
+
+    /* ── REFERRAL ── */
+    .referral { position: relative; padding: 130px 0; overflow: hidden; background: var(--midnight); }
+    @media (max-width: 720px) { .referral { padding: 80px 0; } }
+    .referral-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+    .referral-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(14,26,42,0.96) 0%, rgba(14,26,42,0.88) 45%, rgba(14,26,42,0.62) 100%); }
+    .referral-inner { position: relative; z-index: 1; }
+    .referral-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 80px; align-items: center; }
+    @media (max-width: 900px) { .referral-grid { grid-template-columns: 1fr; gap: 56px; } }
+    .referral .section-title { color: var(--white); }
+    .referral-amount { display: flex; align-items: baseline; gap: 14px; margin: 28px 0 8px; }
+    .referral-amount .amt { font-size: clamp(64px, 9vw, 120px); font-weight: 800; letter-spacing: -0.04em; line-height: 1; color: var(--sand); }
+    .referral-amount .per { font-size: 15px; color: rgba(255,255,255,0.6); max-width: 180px; line-height: 1.45; }
+    .referral-sub { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 520px; line-height: 1.65; margin-bottom: 32px; }
+    .ref-steps { display: flex; flex-direction: column; gap: 0; border-left: 1px solid rgba(212,185,136,0.3); }
+    .ref-step { position: relative; padding: 22px 0 22px 36px; }
+    .ref-step::before { content: ''; position: absolute; left: -7px; top: 30px; width: 13px; height: 13px; border-radius: 50%; background: var(--midnight); border: 2.5px solid var(--sand); }
+    .ref-step h4 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .ref-step h4 span { color: var(--sand); font-weight: 800; margin-right: 8px; font-size: 13px; letter-spacing: 0.1em; }
+    .ref-step p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.65; }
+    .ref-terms { margin-top: 36px; padding: 22px 26px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: var(--r); font-size: 12.5px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+    .ref-terms strong { color: rgba(255,255,255,0.75); }
+
+    /* ── BACK TO TOP ── */
+    .to-top { position: fixed; bottom: 26px; right: 26px; width: 48px; height: 48px; border-radius: 50%; background: var(--midnight); color: var(--sand); border: 1px solid rgba(212,185,136,0.35); cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 80; opacity: 0; pointer-events: none; transition: opacity .3s, transform .2s; box-shadow: 0 8px 24px rgba(14,26,42,0.3); }
+    .to-top.show { opacity: 1; pointer-events: auto; }
+    .to-top:hover { transform: translateY(-3px); }
+
+    /* ── REVEAL ── */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: .1s; } .d2 { transition-delay: .2s; } .d3 { transition-delay: .3s; }
+  </style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announce" id="announce">
+  <strong>New — earn $250 per trade referral</strong> &nbsp;·&nbsp; Same-day quotes &nbsp;·&nbsp; 7–14 days nationwide &nbsp;·&nbsp; RCM-compliant controllers &nbsp;·&nbsp; <a href="#referral" style="color:var(--sand);font-weight:700;text-decoration:none">Learn more →</a>
+  <button class="announce-dismiss" onclick="this.parentElement.style.display='none'" aria-label="Close">×</button>
+</div>
+
+<!-- NAV -->
+<nav>
+  <div class="wrap nav-row">
+    <a href="#" class="logo" aria-label="Clearshift — Smart Film Trade Supply Australia">
+      <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <pattern id="lh" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+            <line x1="0" y1="0" x2="0" y2="3" stroke="#0E1A2A" stroke-width="0.75"/>
+          </pattern>
+          <clipPath id="lc"><polygon points="4,4 30,4 4,30"/></clipPath>
+        </defs>
+        <rect x="4" y="4" width="26" height="26" stroke="#0E1A2A" stroke-width="1.8" fill="none"/>
+        <rect x="4" y="4" width="26" height="26" fill="url(#lh)" clip-path="url(#lc)"/>
+        <line x1="30" y1="4" x2="4" y2="30" stroke="#0E1A2A" stroke-width="1.8"/>
+      </svg>
+      <div class="logo-word">CLEAR<b>SHIFT</b></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#applications">Applications</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#referral" style="color:var(--sand-deep);font-weight:700">Earn $250</a></li>
+      <li><a href="#videos">How It Works</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta"><a href="#quote" class="btn">Trade Enquiry</a></div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu" role="dialog" aria-label="Navigation">
+  <button class="mob-close" id="mobClose" aria-label="Close menu">×</button>
+  <a href="#services" onclick="closeMob()">Services</a>
+  <a href="#applications" onclick="closeMob()">Applications</a>
+  <a href="#pricing" onclick="closeMob()">Pricing</a>
+  <a href="#referral" onclick="closeMob()" style="color:var(--sand)">Earn $250 / Referral</a>
+  <a href="#videos" onclick="closeMob()">How It Works</a>
+  <a href="#faq" onclick="closeMob()">FAQ</a>
+  <a href="#quote" onclick="closeMob()" style="color:var(--sand)">Trade Enquiry →</a>
+  <div class="mob-foot">admin@clearshift.com.au · Trade Sales Only</div>
+</div>
+
+<!-- ═══ HERO BA SLIDER ═══ -->
+<section class="hero" aria-label="Clearshift switchable smart film — before and after demonstration">
+  <div class="ba-hero" id="heroSlider">
+    <!-- FROSTED is the "before" layer — always visible underneath -->
+    <div class="ba-before" style="background-image:url('672e4fb59512eefce9294ed1_SGC_SmartGlass_luxury_office_frosted-p-1080.avif.webp')" role="img" aria-label="Luxury office conference room with smart glass in frosted privacy mode — PDLC film off state"></div>
+    <!-- CLEAR is the "after" layer — clips from RIGHT, revealing clear image on right side -->
+    <div class="ba-after" id="heroAfter" style="background-image:url('672e4fb59e68d29232cb74ce_SGC_SmartGlass_luxury_office_clear-p-1080.avif.webp')" role="img" aria-label="Luxury office conference room with smart glass in crystal clear open mode — PDLC film on state"></div>
+    <div class="ba-line" id="heroLine"></div>
+    <div class="ba-handle" id="heroHandle" aria-hidden="true">
+      <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6"/></svg>
+    </div>
+    <div class="ba-labels" aria-hidden="true">
+      <span class="ba-lbl">Frosted — Private</span>
+      <span class="ba-lbl">Clear — Open</span>
+    </div>
+  </div>
+  <div class="hero-copy">
+    <div class="hero-tag">Switchable Smart Film · Trade Supply · Australia</div>
+    <h1>Glass that <em>switches.</em><br><b>Margin that stays.</b></h1>
+    <p>Wholesale PDLC smart film delivered direct to your job site. Cut to your spec, RCM-compliant, ready to install. For glaziers, tinters, shopfitters and builders across Australia.</p>
+    <div class="hero-btns">
+      <a href="#quote" class="btn sand">Open a Trade Account</a>
+      <a href="#applications" class="btn ghost">See Applications</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BA GALLERY — directly below hero ═══ -->
+<section class="ba-gallery" id="gallery">
+  <div class="wrap">
+    <div class="ba-gallery-header reveal">
+      <div class="tag-label" style="justify-content:center">See the Difference</div>
+      <h2 class="section-title" style="text-align:center">Drag to reveal the transformation.</h2>
+      <p class="section-sub" style="margin:10px auto 0;text-align:center">Every panel switches from frosted privacy to crystal clear in under a second — silently, on demand, indefinitely.</p>
+    </div>
+    <div class="ba-gallery-grid">
+
+      <!-- Card 1: luxury office -->
+      <div class="reveal">
+        <div class="ba-card-slider" id="card1" aria-label="Before and after: smart glass office partition frosted vs clear">
+          <div class="ba-card-before" style="background-image:url('672e4fb59512eefce9294ed1_SGC_SmartGlass_luxury_office_frosted-p-1080.avif.webp')" role="img" aria-label="Office smart glass partition in frosted privacy mode — switchable PDLC film off state"></div>
+          <div class="ba-card-after" id="c1after" style="background-image:url('672e4fb59e68d29232cb74ce_SGC_SmartGlass_luxury_office_clear-p-1080.avif.webp')" role="img" aria-label="Office smart glass partition in clear transparent mode — PDLC film on state"></div>
+          <div class="ba-card-line" id="c1line"></div>
+          <div class="ba-card-handle" id="c1handle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6"/></svg></div>
+          <div class="ba-card-labels" aria-hidden="true">
+            <span class="ba-card-lbl">Frosted</span>
+            <span class="ba-card-lbl">Clear</span>
+          </div>
+        </div>
+        <div class="ba-card-info">
+          <h3>Commercial — Smart Glass Partition Wall</h3>
+          <p>Full-height office partition. One second to frosted for meetings, clear when open-plan. Controller per zone, grouped or independent switching.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: residential (your real photos) -->
+      <div class="reveal d1">
+        <div class="ba-card-slider" id="card2" aria-label="Before and after: residential smart film on existing windows — frosted vs clear">
+          <div class="ba-card-before" style="background-image:url('Front of house frosted window - enhanced.jpg');background-position:center center" role="img" aria-label="Residential home front window with smart film in frosted private mode — Perth Australia"></div>
+          <div class="ba-card-after" id="c2after" style="background-image:url('Front of house not frosted window - enhanced.jpg');background-position:center center" role="img" aria-label="Residential home front window with smart film clear and transparent — smart film on state Perth"></div>
+          <div class="ba-card-line" id="c2line"></div>
+          <div class="ba-card-handle" id="c2handle" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 4l-4 6 4 6M13 4l4 6-4 6"/></svg></div>
+          <div class="ba-card-labels" aria-hidden="true">
+            <span class="ba-card-lbl">Frosted</span>
+            <span class="ba-card-lbl">Clear</span>
+          </div>
+        </div>
+        <div class="ba-card-info">
+          <h3>Residential — Smart Film on Existing Windows</h3>
+          <p>Film applied directly to existing glass. No replacement, no builder. Full privacy when powered off, bright and open when on — your client controls it.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICE OPTIONS ═══ -->
+<section style="padding:120px 0;background:var(--midnight);position:relative;overflow:hidden" id="services">
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent 0,transparent 38px,rgba(212,185,136,0.04) 38px,rgba(212,185,136,0.04) 39px);pointer-events:none"></div>
+  <div class="wrap" style="position:relative;z-index:1">
+    <div class="reveal" style="text-align:center;max-width:680px;margin:0 auto 72px">
+      <div class="tag-label light" style="justify-content:center">How to work with us</div>
+      <h2 class="section-title" style="color:var(--white)">You choose <b>how much</b> we do.</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.6);margin:12px auto 0;text-align:center">Whether you have your own installers or you want us to handle everything — we've got you covered.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px" class="service-grid reveal">
+
+      <!-- Option 1: Supply Only -->
+      <div style="background:var(--mid2);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r);padding:52px 44px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:28px;right:28px;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.3)">Option 01</div>
+        <div style="width:52px;height:52px;background:rgba(212,185,136,0.12);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:28px">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4B988" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <h3 style="font-size:clamp(22px,2.5vw,30px);font-weight:300;color:var(--white);letter-spacing:-0.02em;margin-bottom:16px">Supply Only —<br><b style="font-weight:700">You Install</b></h3>
+        <p style="font-size:15px;color:rgba(255,255,255,0.6);line-height:1.7;margin-bottom:32px">We cut the film to your spec, pack it with the manual and controller kit, and ship direct to your site or depot. Your team installs it, your sparky wires it. Your margin stays entirely yours.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:36px">
+          <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,0.75)"><span style="width:6px;height:6px;background:var(--sand);border-radius:50%;flex-shrink:0"></span>Best for: glaziers, tinters, shopfitters, builders</li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,0.75)"><span style="width:6px;height:6px;background:var(--sand);border-radius:50%;flex-shrink:0"></span>Film cut to spec, bus bars pre-attached</li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,0.75)"><span style="width:6px;height:6px;background:var(--sand);border-radius:50%;flex-shrink:0"></span>RCM controller, manual &amp; edge kit included</li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(255,255,255,0.75)"><span style="width:6px;height:6px;background:var(--sand);border-radius:50%;flex-shrink:0"></span>7–14 days nationwide, from $170–260/m²</li>
+        </ul>
+        <a href="#pricing" class="btn sand">View trade pricing</a>
+      </div>
+
+      <!-- Option 2: Full Service -->
+      <div style="background:var(--sand);border-radius:var(--r);padding:52px 44px;position:relative;overflow:hidden">
+        <div style="position:absolute;top:28px;right:28px;font-size:10px;font-weight:700;letter-spacing:0.16em;text-transform:uppercase;color:rgba(14,26,42,0.4)">Option 02</div>
+        <div style="width:52px;height:52px;background:rgba(14,26,42,0.1);border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:28px">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0E1A2A" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 style="font-size:clamp(22px,2.5vw,30px);font-weight:300;color:var(--midnight);letter-spacing:-0.02em;margin-bottom:16px">Full Service —<br><b style="font-weight:700">We Handle Everything</b></h3>
+        <p style="font-size:15px;color:rgba(14,26,42,0.7);line-height:1.7;margin-bottom:32px">We supply, deliver, install the film, wire the controller, and connect it to your smart home. You get a finished, working system — no trades to coordinate, no guesswork, no mess.</p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:32px">
+          <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,26,42,0.8)"><span style="width:6px;height:6px;background:var(--midnight);border-radius:50%;flex-shrink:0"></span>Best for: homeowners, architects, project managers</li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,26,42,0.8)"><span style="width:6px;height:6px;background:var(--midnight);border-radius:50%;flex-shrink:0"></span>Professional installation by certified technicians</li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,26,42,0.8)"><span style="width:6px;height:6px;background:var(--midnight);border-radius:50%;flex-shrink:0"></span>Smart home integration — Alexa, Google Home, HomeKit</li>
+          <li style="display:flex;align-items:center;gap:12px;font-size:14px;color:rgba(14,26,42,0.8)"><span style="width:6px;height:6px;background:var(--midnight);border-radius:50%;flex-shrink:0"></span>Licensed electrician included, fully compliant</li>
+        </ul>
+        <!-- Smart home logos row -->
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:36px;padding:16px 20px;background:rgba(14,26,42,0.08);border-radius:var(--r);flex-wrap:wrap">
+          <span style="font-size:10px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(14,26,42,0.5)">Works with</span>
+          <span style="font-size:13px;font-weight:700;color:var(--midnight)">⬡ Amazon Alexa</span>
+          <span style="font-size:13px;font-weight:700;color:var(--midnight)">◉ Google Home</span>
+          <span style="font-size:13px;font-weight:700;color:var(--midnight)">⌘ Apple HomeKit</span>
+          <span style="font-size:13px;font-weight:700;color:var(--midnight)">≋ SmartThings</span>
+        </div>
+        <a href="#quote" class="btn" style="background:var(--midnight);color:var(--white)">Get an installation quote</a>
+      </div>
+
+    </div>
+
+    <!-- Smart home callout -->
+    <div class="reveal" style="margin-top:24px;padding:32px 40px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r);display:flex;align-items:center;gap:32px;flex-wrap:wrap">
+      <div style="flex:1;min-width:260px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--sand);margin-bottom:8px">Smart Home Compatible</div>
+        <p style="font-size:15px;color:rgba(255,255,255,0.7);line-height:1.65">Control your glass with a wall switch, RF remote, smartphone app, or any smart home assistant. Ask Alexa to make your bathroom clear. Set Google Home to frost all windows at sunset. It works exactly how you'd expect — because it should.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;min-width:280px">
+        <div style="padding:16px 18px;background:rgba(255,255,255,0.05);border-radius:var(--r);border:1px solid rgba(255,255,255,0.08)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4B988" stroke-width="1.8" style="margin-bottom:10px" aria-hidden="true"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+          <div style="font-size:13px;font-weight:700;color:var(--white)">"Alexa, clear<br>the bathroom"</div>
+        </div>
+        <div style="padding:16px 18px;background:rgba(255,255,255,0.05);border-radius:var(--r);border:1px solid rgba(255,255,255,0.08)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4B988" stroke-width="1.8" style="margin-bottom:10px" aria-hidden="true"><path d="M17 18a5 5 0 00-10 0"/><line x1="12" y1="9" x2="12" y2="2"/><line x1="4.22" y1="10.22" x2="5.64" y2="11.64"/><line x1="1" y1="18" x2="3" y2="18"/><line x1="21" y1="18" x2="23" y2="18"/><line x1="18.36" y1="11.64" x2="19.78" y2="10.22"/><line x1="23" y1="22" x2="1" y2="22"/></svg>
+          <div style="font-size:13px;font-weight:700;color:var(--white)">Frost at sunset,<br>clear at sunrise</div>
+        </div>
+        <div style="padding:16px 18px;background:rgba(255,255,255,0.05);border-radius:var(--r);border:1px solid rgba(255,255,255,0.08)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4B988" stroke-width="1.8" style="margin-bottom:10px" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          <div style="font-size:13px;font-weight:700;color:var(--white)">App control<br>anywhere</div>
+        </div>
+        <div style="padding:16px 18px;background:rgba(255,255,255,0.05);border-radius:var(--r);border:1px solid rgba(255,255,255,0.08)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4B988" stroke-width="1.8" style="margin-bottom:10px" aria-hidden="true"><rect x="1" y="5" width="22" height="14" rx="7"/><circle cx="16" cy="12" r="3"/></svg>
+          <div style="font-size:13px;font-weight:700;color:var(--white)">Wall switch<br>always works</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<style>
+@media (max-width: 720px) {
+  .service-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<!-- ═══ APPLICATIONS ═══ -->
+<section class="applications" id="applications">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:56px">
+      <div class="tag-label">Applications</div>
+      <h2 class="section-title">Anywhere you'd normally specify<br>blinds, frosted glass <b>or curtains.</b></h2>
+    </div>
+    <div class="apps-grid">
+      <div class="app-card reveal">
+        <div class="app-card-img-wrap">
+          <img class="app-card-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80" alt="Luxury residential bathroom with glass shower screen — ideal application for switchable smart privacy film" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        </div>
+        <div class="app-card-body">
+          <h3>Residential</h3>
+          <p>Bathrooms, ensuites, bedroom windows, skylights, glass balustrades. Replace permanent frosted glass with smart film that clears on demand.</p>
+        </div>
+      </div>
+      <div class="app-card reveal d1">
+        <div class="app-card-img-wrap">
+          <img class="app-card-img" src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Modern commercial office interior with glass partitions — smart film application for meeting rooms Australia" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        </div>
+        <div class="app-card-body">
+          <h3>Commercial Offices</h3>
+          <p>Meeting rooms, executive suites, open-plan dividers. Frosted for privacy in a second, clear when the meeting ends. Works with BMS and scene control.</p>
+        </div>
+      </div>
+      <div class="app-card reveal d2">
+        <div class="app-card-img-wrap">
+          <img class="app-card-img" src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=900&q=80" alt="Modern hospital patient room — switchable privacy glass application for medical and healthcare facilities" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        </div>
+        <div class="app-card-body">
+          <h3>Medical &amp; Healthcare</h3>
+          <p>Consultation rooms, patient bays, ICU viewing windows. Instant privacy compliance without permanent obstructions, manual blinds or roller shutters.</p>
+        </div>
+      </div>
+      <div class="app-card reveal">
+        <div class="app-card-img-wrap">
+          <img class="app-card-img" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Luxury hotel suite with glass bathroom partition — smart film application for hospitality and hotels" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+        </div>
+        <div class="app-card-body">
+          <h3>Hospitality &amp; Hotels</h3>
+          <p>Bathroom glass, spa suites, private dining rooms. Creates premium, flexible spaces guests talk about long after checkout.</p>
+        </div>
+      </div>
+      <div class="app-card reveal d1">
+        <div class="app-card-img-wrap">
+          <img class="app-card-img" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=80" alt="Premium retail store interior with glass display windows — smart film application for shopfronts and fitting rooms" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+        </div>
+        <div class="app-card-body">
+          <h3>Retail &amp; Shopfronts</h3>
+          <p>Display windows, fitting rooms, luxury product reveals. Clear by day, frosted at close. Also works as a high-gain rear-projection screen for activations.</p>
+        </div>
+      </div>
+      <div class="app-card reveal d2">
+        <div class="app-card-img-wrap">
+          <img class="app-card-img" src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=900&q=80" alt="Projection screen in dark presentation room — smart glass rear-projection application for AV and events" loading="lazy" onerror="this.parentElement.style.display='none'">
+          <div class="app-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+        </div>
+        <div class="app-card-body">
+          <h3>AV &amp; Projection Screens</h3>
+          <p>Smart glass in frosted mode accepts a rear-projection image with high gain and clarity. Disappears completely when powered clear — an invisible screen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section class="pricing" id="pricing">
+  <div class="wrap">
+    <div class="pricing-intro reveal">
+      <div class="tag-label">Trade Pricing</div>
+      <h2 class="section-title">Three tiers. <b>One handshake.</b></h2>
+      <p class="section-sub">All prices AUD ex-GST. Tiers move automatically as your order history grows — no applications, no forms, no account manager approval required. Quotes valid 14 days.</p>
+    </div>
+    <div class="tiers-grid reveal">
+
+      <!-- TIER 1 -->
+      <div class="tier">
+        <div class="tier-name">Tier 1</div>
+        <div class="tier-headline">Casual</div>
+        <div class="tier-qualify">New accounts &amp; first orders. Starts immediately — no paperwork.</div>
+        <ul class="tier-rows">
+          <li class="tier-row"><span class="item-name">Film — 1 to 10 m²</span><span class="item-price">$260/m²</span></li>
+          <li class="tier-row"><span class="item-name">Film — 10 to 30 m²</span><span class="item-price">$240/m²</span></li>
+          <li class="tier-row"><span class="item-name">Controller + transformer</span><span class="item-price">$280</span></li>
+          <li class="tier-row"><span class="item-name">Connection kit</span><span class="item-price">$45</span></li>
+        </ul>
+        <div class="tier-terms">Payment: prepaid only — Stripe, bank transfer, or PayID</div>
+      </div>
+
+      <!-- TIER 2 (featured) -->
+      <div class="tier featured">
+        <div class="tier-badge">Most Popular</div>
+        <div class="tier-name">Tier 2</div>
+        <div class="tier-headline">Trade</div>
+        <div class="tier-qualify">Unlocks after 5 orders or one order over $1,500. Auto-applied.</div>
+        <ul class="tier-rows">
+          <li class="tier-row"><span class="item-name">Film — 1 to 10 m²</span><span class="item-price">$220/m²</span></li>
+          <li class="tier-row"><span class="item-name">Film — 10 to 30 m²</span><span class="item-price">$200/m²</span></li>
+          <li class="tier-row"><span class="item-name">Film — 30 m²+ / full roll</span><span class="item-price">$180/m²</span></li>
+          <li class="tier-row"><span class="item-name">Controller + transformer</span><span class="item-price">$240</span></li>
+          <li class="tier-row"><span class="item-name">Connection kit</span><span class="item-price">$35</span></li>
+        </ul>
+        <div class="tier-terms">Payment: prepaid first 3 orders · then COD</div>
+      </div>
+
+      <!-- TIER 3 -->
+      <div class="tier">
+        <div class="tier-name">Tier 3</div>
+        <div class="tier-headline">Account</div>
+        <div class="tier-qualify">5 m²+ weekly average or $3k+ monthly. Net 14 terms available.</div>
+        <ul class="tier-rows">
+          <li class="tier-row"><span class="item-name">Film (any volume)</span><span class="item-price">from $170/m²</span></li>
+          <li class="tier-row"><span class="item-name">Controller + transformer</span><span class="item-price">$220</span></li>
+          <li class="tier-row"><span class="item-name">Connection kit</span><span class="item-price">$30</span></li>
+        </ul>
+        <div class="tier-terms">Payment: Net 14 terms after 3 months at Tier 2</div>
+      </div>
+
+    </div>
+
+    <div class="pricing-note reveal">
+      <strong>Minimum order: 1 m².</strong> Every order includes the Clearshift installation manual, bus bars pre-attached on your nominated edge, and an edge-sealing kit. No credit terms in the first 6 months — this protects both of us. All orders include a 14-day quote validity (FX moves our landed costs). Controller warranty: 2 years. Film warranty: 5 years.
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ REFERRAL PROGRAM ═══ -->
+<section class="referral" id="referral">
+  <div class="referral-bg" style="background-image:url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=2000&q=80')" role="img" aria-label="Luxury Australian home at dusk with large glass windows"></div>
+  <div class="wrap referral-inner">
+    <div class="referral-grid">
+      <div class="reveal">
+        <div class="tag-label light">Referral Program</div>
+        <h2 class="section-title">Know someone who<br>needs smart glass? <b>Get paid.</b></h2>
+        <div class="referral-amount">
+          <span class="amt">$250</span>
+          <span class="per">per successful referral, every time. No cap.</span>
+        </div>
+        <p class="referral-sub">Refer a builder, glazier, business or homeowner to Clearshift. When their first order of $2,000+ is placed and paid, we transfer $250 straight to you — bank transfer or account credit, your choice.</p>
+        <div class="hero-btns" style="pointer-events:auto">
+          <a href="#quote" class="btn sand">Refer someone now</a>
+          <a href="mailto:admin@clearshift.com.au?subject=Referral%20—%20Clearshift%20%24250%20Program&body=Hi%20Clearshift%2C%0A%0AI'd%20like%20to%20refer%3A%0A%0AName%3A%0ACompany%3A%0APhone%2Femail%3A%0AWhat%20they%20need%3A%0A%0AMy%20name%20and%20payout%20details%3A%0A" class="btn ghost">Email a referral</a>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div class="ref-steps">
+          <div class="ref-step">
+            <h4><span>01</span>Send us their details</h4>
+            <p>Use the enquiry form below or email admin@clearshift.com.au with their name and contact. We log the referral against your name the moment it lands.</p>
+          </div>
+          <div class="ref-step">
+            <h4><span>02</span>They place their first order</h4>
+            <p>We quote them same-day like any client. The referral stays linked to you for 90 days — even if they take their time deciding.</p>
+          </div>
+          <div class="ref-step">
+            <h4><span>03</span>You get $250</h4>
+            <p>Once their first order of $2,000+ is paid in full, we pay you $250 within 7 days — bank transfer, PayID, or credit on your trade account.</p>
+          </div>
+        </div>
+        <div class="ref-terms">
+          <strong>The fine print, kept short:</strong> Payout applies to the referred client's first paid order of $2,000+ ex-GST. Referral must be registered before they place an order. Unlimited referrals — refer five clients, earn $1,250. You don't need a trade account to refer. Payouts within 7 days of cleared payment. Self-referrals and existing Clearshift clients excluded.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ VIDEOS ═══ -->
+<section class="videos" id="videos">
+  <div class="wrap">
+    <div class="reveal">
+      <div class="tag-label light">How It Works</div>
+      <h2 class="section-title">Watch smart film<br><b>in action.</b></h2>
+      <p class="section-sub">See real installations, understand the PDLC technology, and follow a professional step-by-step installation walkthrough.</p>
+    </div>
+    <div class="videos-grid">
+      <div class="video-card reveal">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/MPW_Efjzv8U?rel=0&modestbranding=1&color=white"
+                  title="Smart Glass full product overview — how PDLC switchable privacy glass works"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <h3>Smart Glass — Full Product Overview</h3>
+        <p>How PDLC technology works, what the end client experiences, and why it permanently replaces blinds, curtains and frosted glass.</p>
+      </div>
+      <div class="video-card reveal d1">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/dowtQNV8v60?rel=0&modestbranding=1&color=white"
+                  title="PDLC smart film switching demonstration — frosted to clear live"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <h3>Live Switching Demonstration</h3>
+        <p>A sample panel switching from frosted to crystal clear — the exact speed, quality and visual result your end client will see on day one.</p>
+      </div>
+      <div class="video-card reveal d2">
+        <div class="video-embed">
+          <iframe src="https://www.youtube.com/embed/BM2MImofT1w?rel=0&modestbranding=1&color=white"
+                  title="Smart film professional installation guide — how to install PDLC film on existing glass"
+                  allowfullscreen loading="lazy"></iframe>
+        </div>
+        <h3>Professional Installation Guide</h3>
+        <p>Step-by-step: glass prep, film application, edge sealing, controller wiring for the electrician. Everything in the Clearshift install manual, on screen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="reveal" style="margin-bottom:0">
+      <div class="tag-label">How To Order</div>
+      <h2 class="section-title">Order, dispatch, install.<br><b>That's the whole process.</b></h2>
+    </div>
+    <div class="process-grid">
+      <div class="process-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>Send dimensions</h3>
+        <p>Email us or fill in the form below. Include panel dimensions, postcode, application type and control preferences. We reply same day with pricing and lead time.</p>
+      </div>
+      <div class="process-step reveal d1">
+        <div class="step-num">02</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+        <h3>Receive fixed quote</h3>
+        <p>We send a fixed-price quote valid for 14 days — panel cut sizes, bus bar positions, controller and kit quantities, freight. No surprises at invoice.</p>
+      </div>
+      <div class="process-step reveal d2">
+        <div class="step-num">03</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>We cut &amp; dispatch</h3>
+        <p>Film is cut to spec, bus bars attached on your nominated edge, packed with the install manual and edge-sealing kit, dispatched direct to your site — 7–14 days.</p>
+      </div>
+      <div class="process-step reveal d3">
+        <div class="step-num">04</div>
+        <div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>You install, they switch</h3>
+        <p>Your installer fits the film. Your sparky connects the 60V transformer to mains under AS/NZS 3000. Your client gets a switch. Your margin stays yours.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="reveal">
+        <div class="tag-label">FAQ</div>
+        <h2 class="section-title">Questions we hear <em>every day.</em></h2>
+        <p class="section-sub" style="margin-top:12px">If yours isn't here, email us — we'll reply within a few hours, business hours or not.</p>
+        <a href="#quote" class="btn ghost" style="margin-top:28px;color:var(--midnight);border-color:var(--mid2);background:transparent" onmouseover="this.style.background='var(--midnight)';this.style.color='white'" onmouseout="this.style.background='transparent';this.style.color='var(--midnight)'">Ask a question</a>
+      </div>
+      <div class="faq-list reveal d1">
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">Does the mains wiring need a licensed electrician?<span class="faq-plus">+</span></button>
+          <div class="faq-body"><div class="faq-body-inner">Yes — always. The film runs at 60V AC (extra-low voltage), which the installer handles. The 240V mains connection from wall power to the transformer <strong>must</strong> be performed by a licensed electrician under AS/NZS 3000. Our controllers are RCM-marked and ship test-cycled. The mains side is your sparky's work, not the film installer's.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">Can this be applied to existing glass without replacing it?<span class="faq-plus">+</span></button>
+          <div class="faq-body"><div class="faq-body-inner">Yes — that's the primary use case. Smart film has a self-adhesive PDLC backing that bonds directly to the interior face of existing glass. Dry application only (no water). Clean glass thoroughly, apply film, squeegee from centre out, edge-seal with the included silicone kit, wire bus bars to the controller. Full steps in the installation manual.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">What's the lead time from order to delivery?<span class="faq-plus">+</span></button>
+          <div class="faq-body"><div class="faq-body-inner">7–14 business days from confirmed payment to delivery at your site or depot, depending on order size and your state. For urgent jobs, call us — if stock allows we can often cut and dispatch next day for metro locations.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">How do multiple panels get controlled?<span class="faq-plus">+</span></button>
+          <div class="faq-body"><div class="faq-body-inner">One controller per zone for independent panel control — each zone gets its own switch, remote or app channel. For grouped control (all panels switch together), wire them in parallel on a single controller. Both configurations are covered with wiring diagrams in the install manual included with every order.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">What's your defect and replacement policy?<span class="faq-plus">+</span></button>
+          <div class="faq-body"><div class="faq-body-inner">Always bench-test before install — apply to a spare glass panel, power up, check for dead zones or inconsistent switching. If defects exceed 3% of panel surface, photograph and submit a warranty claim within 7 days of delivery. We replace at no charge, cut to your original spec, dispatched within standard lead time. We cannot accept post-installation defect claims caused by improper application.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">How does the $250 referral program work?<span class="faq-plus">+</span></button>
+          <div class="faq-body"><div class="faq-body-inner">Send us the name and contact of anyone who needs smart film — a builder, business, or homeowner — before they place an order. The referral stays linked to you for 90 days. When their first order of $2,000+ ex-GST is paid in full, we pay you $250 within 7 days via bank transfer, PayID, or trade account credit. Unlimited referrals, no trade account required to participate. Self-referrals and existing clients excluded.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-btn" onclick="toggleFaq(this)">How does pricing move between tiers?<span class="faq-plus">+</span></button>
+          <div class="faq-body"><div class="faq-body-inner">All new accounts start at Tier 1 (prepaid). Tier 2 unlocks automatically after 5 orders or a single order over $1,500 — no application required. Tier 3 is for accounts averaging 5 m²+ weekly or $3,000+ monthly, and unlocks Net 14 payment terms after 3 months at Tier 2. Everything happens automatically — we notify you when you move up.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUOTE FORM ═══ -->
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="quote-grid">
+      <div class="reveal">
+        <div class="tag-label light">Get Started</div>
+        <h2 class="section-title">Send us a job.<br><b>We quote same day.</b></h2>
+        <p class="section-sub">Dimensions, postcode, application. We come back with trade pricing, lead time, and a panel drawing ready to sign off — same business day.</p>
+        <ul class="quote-perks">
+          <li>Fixed-price quote — no surprises, valid 14 days</li>
+          <li>Panels cut to spec, bus bars pre-attached</li>
+          <li>RCM-compliant controller included per zone</li>
+          <li>23-page install manual shipped with every order</li>
+          <li>5-year film warranty · 2-year controller warranty</li>
+          <li>Download: <a href="clearshift-installation-manual.pdf" download style="color:var(--sand);font-weight:600">Installation Manual (PDF)</a></li>
+          <li>Download: <a href="smart-film-installation-guide.pdf" download style="color:var(--sand);font-weight:600">Smart Film Install Guide (PDF)</a></li>
+        </ul>
+        <div class="quote-contact">
+          <div class="c-row"><span class="c-lbl">Email</span><span class="c-val"><a href="mailto:admin@clearshift.com.au">admin@clearshift.com.au</a></span></div>
+          <div class="c-row"><span class="c-lbl">Phone</span><span class="c-val"><a href="tel:0455377439">0455 377 439</a></span></div>
+          <div class="c-row"><span class="c-lbl">Hours</span><span class="c-val">Mon–Fri · 7am–5pm AEST</span></div>
+          <div class="c-row"><span class="c-lbl">Coverage</span><span class="c-val">National · All states &amp; territories</span></div>
+        </div>
+      </div>
+      <div class="reveal d1">
+        <div class="form-wrap">
+          <h3>Open a Trade Account</h3>
+          <div id="quoteFormWrap">
+            <form id="quoteForm" action="https://formsubmit.co/admin@clearshift.com.au" method="POST" onsubmit="handleSubmit(event)">
+              <input type="hidden" name="_subject" value="New enquiry — clearshift.com.au">
+              <input type="hidden" name="_template" value="table">
+              <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+              <div class="form-2col">
+                <div class="form-group"><label>First name *</label><input type="text" name="firstName" placeholder="Jake" required autocomplete="given-name"></div>
+                <div class="form-group"><label>Last name *</label><input type="text" name="lastName" placeholder="Thornton" required autocomplete="family-name"></div>
+              </div>
+              <div class="form-2col">
+                <div class="form-group"><label>Email *</label><input type="email" name="email" placeholder="jake@glasspro.com.au" required autocomplete="email"></div>
+                <div class="form-group"><label>Phone *</label><input type="tel" name="phone" placeholder="04xx xxx xxx" required autocomplete="tel"></div>
+              </div>
+              <div class="form-2col">
+                <div class="form-group">
+                  <label>Trade type *</label>
+                  <select name="tradeType" required>
+                    <option value="" disabled selected>Select your trade</option>
+                    <option>Window tinter</option>
+                    <option>Shopfitter / commercial fitout</option>
+                    <option>Glazier</option>
+                    <option>Builder / custom homes</option>
+                    <option>Architect / interior designer</option>
+                    <option>Electrician (referral partner)</option>
+                    <option>I'm referring someone ($250 program)</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>State</label>
+                  <select name="state">
+                    <option value="">Select state</option>
+                    <option>WA</option><option>NSW</option><option>VIC</option>
+                    <option>QLD</option><option>SA</option><option>TAS</option>
+                    <option>ACT</option><option>NT</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group"><label>Referred by someone? Their name (they earn $250)</label><input type="text" name="referredBy" placeholder="e.g. Jake Thornton, GlassPro WA" autocomplete="off"></div>
+              <div class="form-group"><label>Job details — dimensions, application, timeline</label><textarea name="jobDetails" placeholder="e.g. 3 bathroom shower screens, each approx 900 × 1800mm, Perth suburb, job in 3 weeks. Need film + controller pricing." rows="4"></textarea></div>
+              <button type="submit" class="form-submit">Submit Trade Enquiry →</button>
+            </form>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            <h3>Enquiry received.</h3>
+            <p>We'll reply with pricing and lead time by end of business today (Mon–Fri 7am–5pm AEST). Check your inbox — and spam just in case.</p>
+          </div>
+          <p class="form-note">Trade and ABN holders only. We do not sell direct to the public — end clients are welcome to ask us for a trade referral near them.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<div class="compliance-bar">
+  Smart film is a 60V AC switched electrical product. Mains-side connection must be performed by a licensed electrician under AS/NZS 3000. All controllers and transformers carry RCM mark. Prices in AUD ex-GST. Quotes valid 14 days.
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="footer-brand-mark" aria-label="Clearshift — Switchable Smart Film, Trade Supply, Australia">
+          <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+              <pattern id="fh" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+                <line x1="0" y1="0" x2="0" y2="3" stroke="white" stroke-width="0.75"/>
+              </pattern>
+              <clipPath id="fc"><polygon points="4,4 30,4 4,30"/></clipPath>
+            </defs>
+            <rect x="4" y="4" width="26" height="26" stroke="white" stroke-width="1.8" fill="none"/>
+            <rect x="4" y="4" width="26" height="26" fill="url(#fh)" clip-path="url(#fc)"/>
+            <line x1="30" y1="4" x2="4" y2="30" stroke="white" stroke-width="1.8"/>
+          </svg>
+          <div class="logo-word" style="color:rgba(255,255,255,0.8)">CLEAR<b>SHIFT</b></div>
+        </a>
+        <p>Wholesale switchable PDLC smart film for Australian trades. Cut to spec, dispatched direct. Glaziers, tinters, shopfitters and builders nationwide.</p>
+      </div>
+      <div>
+        <h5>Explore</h5>
+        <ul>
+          <li><a href="#applications">Applications</a></li>
+          <li><a href="#pricing">Trade Pricing</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#quote">Trade Enquiry</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="clearshift-installation-manual.pdf" download>Installation Manual</a></li>
+          <li><a href="smart-film-installation-guide.pdf" download>Smart Film Install Guide</a></li>
+          <li><a href="#videos">How-To Videos</a></li>
+          <li><a href="#referral" style="color:var(--sand)">Referral Program — Earn $250</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="mailto:admin@clearshift.com.au">admin@clearshift.com.au</a></li>
+          <li><a href="tel:0455377439">0455 377 439</a></li>
+          <li><span>Mon–Fri · 7am–5pm AEST</span></li>
+          <li><span>National supply · All states</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Clearshift Smart Film Co. Pty Ltd · ABN 98 747 853 912</span>
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Trade</a>
+        <span>Trade sales only · Australia</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+// ── BACK TO TOP ──
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => toTop.classList.toggle('show', window.scrollY > 700), { passive: true });
+toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ── MOBILE MENU ──
+function closeMob() { document.getElementById('mobMenu').classList.remove('open'); }
+document.getElementById('hamburger').addEventListener('click', () => document.getElementById('mobMenu').classList.add('open'));
+document.getElementById('mobClose').addEventListener('click', closeMob);
+
+// ── BA SLIDER ENGINE ──
+// after layer uses inset(0 right% 0 0): clips from right, shows left portion.
+// Dragging right → pct grows → right-clip shrinks → more after visible.
+// ba-before = clear image (always underneath), ba-after = frosted (clips away as you drag right)
+// So: drag right = reveal more clear (after layer shows less frosted)
+// Labels: LEFT = FROSTED at start, RIGHT = CLEAR revealed as you drag right
+function initBA(sliderId, afterId, lineId, handleId) {
+  const slider = document.getElementById(sliderId);
+  const after  = document.getElementById(afterId);
+  const line   = document.getElementById(lineId);
+  const handle = document.getElementById(handleId);
+  if (!slider || !after) return;
+
+  let drag = false;
+
+  function update(clientX) {
+    const r = slider.getBoundingClientRect();
+    const pct = Math.max(1, Math.min(99, ((clientX - r.left) / r.width) * 100));
+    after.style.clipPath  = 'inset(0 ' + (100 - pct) + '% 0 0)';
+    if (line)   line.style.left   = pct + '%';
+    if (handle) handle.style.left = pct + '%';
+  }
+
+  slider.addEventListener('mousedown',  function(e) { drag = true; update(e.clientX); e.preventDefault(); });
+  document.addEventListener('mouseup',  function()  { drag = false; });
+  document.addEventListener('mousemove',function(e) { if (drag) update(e.clientX); });
+  slider.addEventListener('touchstart', function(e) { drag = true; update(e.touches[0].clientX); }, { passive: true });
+  document.addEventListener('touchend', function()  { drag = false; });
+  document.addEventListener('touchmove',function(e) { if (drag) update(e.touches[0].clientX); }, { passive: true });
+}
+
+initBA('heroSlider', 'heroAfter', 'heroLine', 'heroHandle');
+initBA('card1',      'c1after',   'c1line',   'c1handle');
+initBA('card2',      'c2after',   'c2line',   'c2handle');
+
+// ── FAQ ──
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const open = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!open) item.classList.add('open');
+}
+
+// ── FORM ──
+function handleSubmit(e) {
+  e.preventDefault();
+  const f = document.getElementById('quoteForm');
+  const btn = f.querySelector('.form-submit');
+  btn.disabled = true; btn.textContent = 'Sending…';
+  fetch('https://formsubmit.co/ajax/admin@clearshift.com.au', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json' },
+    body: new FormData(f)
+  }).then(r => {
+    if (!r.ok) throw new Error();
+    document.getElementById('quoteFormWrap').style.display = 'none';
+    document.getElementById('formSuccess').style.display   = 'block';
+  }).catch(() => {
+    btn.disabled = false; btn.textContent = 'Submit Trade Enquiry →';
+    alert('Something went wrong sending your enquiry — please email admin@clearshift.com.au directly.');
+  });
+}
+
+// ── REVEAL ON SCROLL ──
+const ro = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); }});
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+</script>
+</body>
+</html>
